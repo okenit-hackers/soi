@@ -1,0 +1,51 @@
+---
+- name: Zabbix Agent
+ hosts: all
+ become: yes
+ vars_files:
+ - vars.yml
+ tasks:
+ - name: create zabbix user
+  user:
+  name: "{{user}}"
+  comment: Zabbix monitoring system
+  shell: /sbin/nologin
+  home:
+  tags:
+  - create-user
+  - install-agent
+ - name: install zabbix-agent package
+  tags:
+  - install-agent
+  apt:
+  update_cache: yes
+  name: "zabbix-agent"
+ - name: create dirs
+  file:
+  path: "{{ item }}"
+  state: "directory"
+  recurse: yes
+  group: "{{user}}"
+  owner: "{{group}}"
+  loop: "{{ dirs }}"
+  tags:
+  - install-agent
+ - name: ensure log file exists
+  shell: "[ ! -f {{log_file}} ] && touch {{log_file}}; chown {{user}}:{{group}} {{log_file}}; chmod 664 {{log_file}}"
+  tags:
+  - install-agent
+ - name: "deliver {{config_path}}"
+  template:
+  src: zabbix-agentd.conf.jinja2
+  dest: "{{config_path}}"
+  owner: "{{user}}"
+  group: "{{group}}"
+  mode: 0600
+  tags:
+  - install-agent
+ - name: start zabbix-agent service
+  tags:
+  - restart-service
+  service:
+  name: zabbix-agent
+  state: restarted

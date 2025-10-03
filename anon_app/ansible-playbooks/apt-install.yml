@@ -1,0 +1,53 @@
+---
+- name: apt install
+ hosts: all
+ become: yes
+ gather_facts: yes
+
+ pre_tasks:
+ - name: 'Update all packages to their latest version'
+  raw: apt-get update --allow-releaseinfo-change
+  register: failure
+  ignore_errors: yes
+
+ - name: 'Restart ntp because clocks are out of sync'
+  shell: systemctl restart ntp
+  when: failure.rc != 0
+
+ - name: 'Wait for ntp to start'
+  wait_for:
+  timeout: 10
+  when: failure.rc != 0
+
+ - name: 'Retry update'
+  raw: apt-get update --allow-releaseinfo-change
+  when: failure.rc != 0
+
+ tasks:
+ - name: "Add repository depending on OS type"
+  block:
+  - name: 'Add deadsnakes PPA repository for Python versions (Ubuntu)'
+   apt_repository:
+   repo: ppa:deadsnakes/ppa
+   state: present
+   when: ansible_facts['lsb']['id'] == "Ubuntu"
+
+  - name: 'Add Debian Stretch archive repo (Debian)'
+   apt_repository:
+   repo: "deb http://archive.debian.org/debian/ stretch contrib main non-free"
+   state: present
+   when: ansible_facts['lsb']['id'] == "Debian"
+
+ - name: 'Update apt cache after adding repository'
+  apt:
+  update_cache: yes
+
+ - name: 'Install python2'
+  apt:
+  name: python2.7
+
+ - name: "Install additional packages"
+  apt:
+  update_cache: yes
+  name: "{{item}}"
+  loop: "{{ lookup('env', 'PACKAGES') }}"

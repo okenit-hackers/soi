@@ -1,0 +1,24 @@
+FROM maven.lan:8082/poetry:1.2.0-slim
+
+ENV PYTHONUNBUFFERED=1
+ENV PATH="/opt:${PATH}"
+ENV PYTHONPATH="${PYTHONPATH}:/opt"
+
+WORKDIR /opt
+
+COPY config/dbus/accessibility.conf /etc/dbus-1/accessibility.conf
+
+RUN apt-get update \
+ && apt-get install -y python net-tools iproute2 iptables sshpass autossh ansible python3-psutil apt-transport-https dbus zabbix-agent hping3 graphviz gnupg wget gcc \
+ && rm -rf /var/lib/apt/lists/* \
+ && mkdir -p /var/run/dbus \
+ && mkdir -p /usr/share/dbus-1/accessibility-services
+
+RUN wget -q -O - https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub | apt-key add - \
+ && wget https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-buster.list -O /etc/apt/sources.list.d/openvpn3.list \
+ && apt-get update \
+ && apt-get install -y openvpn3
+
+RUN ansible-galaxy install 'kyl191.openvpn,v0.9.1' 'geerlingguy.swap' \
+ && sed -i 's/ansible.builtin.//g' /root/.ansible/roles/kyl191.openvpn/tasks/cert_sync_detection.yml \
+ && sed -i 's/# gather_timeout = 10/gather_timeout = 20/g' /etc/ansible/ansible.cfg

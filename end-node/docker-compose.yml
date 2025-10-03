@@ -1,0 +1,73 @@
+version: '3'
+
+volumes:
+ # pg_volume: # том для БД
+ static_volume: # том дял статических файлов (js, css)
+ media_volume: # том для медиафайлов (загружаемых файлов)
+ out_volume: # том для хранения собранных данных
+ browser_profiles: # том для хранения файлов профилей браузеров
+ selenium_ide_templates: # том для хранения файлов шаблонов selenium ide
+
+networks:
+ ssh_network:
+ driver: bridge
+
+services:
+ openssh:
+ image: sunnycapt/openssh
+ hostname: openssh
+ networks:
+  - ssh_network
+ environment:
+  - PUID=${PUID}
+  - PGID=${PGID}
+  - SUDO_ACCESS=false
+  - PASSWORD_ACCESS=false
+  - USER_NAME=docker_user
+  - USER_PASSWORD=qwerty
+ volumes:
+  - ./config:/config
+  - out_volume:/tmp/out
+  - browser_profiles:/tmp/browser_profiles
+  - selenium_ide_templates:${SCRAPER_SELENIUM_IDE_TEMPLATES_DIR}
+ ports:
+  - 0.0.0.0:${DOCKER_OPENSSH_PORT}:2222
+ restart: always
+
+ celery:
+ image: ${APP_IMAGE_NAME}
+ command: celery ${EXTERNAL_CELERY_QUEUE_NAME} ${CONCURRENCY}
+ restart: on-failure
+ networks:
+  - ssh_network
+ volumes:
+  - out_volume:/tmp/out
+  - browser_profiles:/tmp/browser_profiles
+  - selenium_ide_templates:${SCRAPER_SELENIUM_IDE_TEMPLATES_DIR}
+ env_file:
+  - celery.env
+ hostname: ${EXTERNAL_CELERY_QUEUE_NAME}
+
+ priority_celery:
+ image: ${APP_IMAGE_NAME}
+ command: celery ${PRIORITY_EXTERNAL_CELERY_QUEUE_NAME} ${PRIORITY_CONCURRENCY}
+ restart: on-failure
+ networks:
+  - ssh_network
+ volumes:
+  - out_volume:/tmp/out
+  - browser_profiles:/tmp/browser_profiles
+  - selenium_ide_templates:${SCRAPER_SELENIUM_IDE_TEMPLATES_DIR}
+ env_file:
+  - celery.env
+ hostname: ${PRIORITY_EXTERNAL_CELERY_QUEUE_NAME}
+
+ filebeat:
+ image: elastic/filebeat:7.10.1
+ user: root
+ networks:
+  - ssh_network
+ volumes:
+  - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+  - /var/log/auth.log:/var/log/auth.log:ro
+ command: filebeat -e -strict.perms=false

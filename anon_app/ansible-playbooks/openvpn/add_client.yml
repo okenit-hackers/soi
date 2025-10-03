@@ -1,0 +1,51 @@
+---
+- name: Add client to OpenVPN
+ hosts: all
+ become: yes
+ vars_files:
+ vars.yml
+
+ pre_tasks:
+ - name: check that openvpn conf exists
+  stat:
+  path: "{{ openvpn_base_dir }}/{{openvpn_config_file}}.conf"
+  register: conf_stat
+ - name: Copy old config
+  command: >
+  cp {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf
+   {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf.old
+  when: conf_stat.stat is defined and conf_stat.stat.exists
+ - name: Ensure ccd dir exists
+  file:
+  path: "{{ ovpn_ccd_dir }}"
+  state: "directory"
+  recurse: yes
+  tags:
+  - client_keys
+ - name: Create ccd file
+  copy:
+  content: "{{ item }}"
+  dest: "{{ ovpn_ccd_dir }}/{{ ovpn_username }}"
+  loop: "{{ ovpn_ccd_content }}"
+  when: ovpn_sub_network != openvpn_server_network
+  tags:
+  - client_keys
+
+ roles:
+ - role: kyl191.openvpn
+  tags: [ 'client_keys' ]
+
+ post_tasks:
+ - name: restore openvpn config
+  # Добавляем к старому конфигу все новые строки
+  shell: |
+  grep -Fxvf {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf.old \
+   {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf > {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf.new
+  cat {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf.old \
+   {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf.new > {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf
+  rm {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf.old {{ openvpn_base_dir }}/{{openvpn_config_file}}.conf.new
+  notify:
+  - restart openvpn
+  when: conf_stat.stat is defined and conf_stat.stat.exists
+  tags:
+  - client_keys

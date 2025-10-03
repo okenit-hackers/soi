@@ -1,0 +1,22 @@
+# change also config/zabbix/agents/zabbix-agentd.conf.jinja2 in soi and sos
+
+LogType=file
+# change also ./vars.yml:log_file
+LogFile=/var/log/zabbix.log
+
+# for passive (dont change plz)
+Server=127.0.0.1
+ListenIP=127.0.0.1
+
+# for active (dont change plz)
+ServerActive=127.0.0.1:{{server_port}}
+Hostname={{hostname}}
+
+# change also ./vars.yml:user
+User=zabbix
+
+# change also ./vars.yml:dirs
+Include=/etc/zabbix/zabbix_agentd.conf.d/
+
+# change also ./vars.yml:dirs
+LoadModulePath=/var/lib/zabbix/modules/

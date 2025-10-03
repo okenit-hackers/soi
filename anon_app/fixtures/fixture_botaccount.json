@@ -1,0 +1,848 @@
+[
+ {
+ "model": "auth.user",
+ "pk": 1,
+ "fields": {
+  "password": "pbkdf2_sha256$260000$eWpAGWJ9pEklC5nFnOUqkp$IwJuAqG9E2t1uX3D0SgzMVN4GHJk2Vl9oscZTq7PH6E=",
+  "last_login": "2023-08-14T14:56:58Z",
+  "is_superuser": true,
+  "username": "admin",
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2023-06-19T14:11:21Z",
+  "groups": [],
+  "user_permissions": []
+  }
+ },
+ {
+  "model": "lemmings_app.botaccount",
+  "pk": 276,
+  "fields": {
+   "chain": 12,
+   "service": "PROTON_MAIL",
+   "username": "1997hallmary@proton.me",
+   "password": ")0VZpO2j6T",
+   "phone_number": "+34637777217",
+   "location": null,
+   "needs_new_mail": true,
+   "email": null,
+   "extra": {
+    "error": null,
+    "proxy": {
+     "proxies": [
+      {
+       "pk": 2706,
+       "url": "http://nn9Sr7PP:JSFEWTFX@45.152.215.250:64000"
+      },
+      {
+       "pk": 2702,
+       "url": "http://nn9Sr7PP:JSFEWTFX@45.140.62.55:63256"
+      },
+      {
+       "pk": 2698,
+       "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+      }
+     ],
+     "used_proxies": [],
+     "current_proxy": {
+      "pk": 2248,
+      "url": "http://nn9Sr7PP:JSFEWTFX@46.151.177.20:64420"
+     }
+    },
+    "bot_info": {
+     "error": null,
+     "proxy": {
+      "proxies": [
+       {
+        "pk": 2706,
+        "url": "http://nn9Sr7PP:JSFEWTFX@45.152.215.250:64000"
+       },
+       {
+        "pk": 2702,
+        "url": "http://nn9Sr7PP:JSFEWTFX@45.140.62.55:63256"
+       },
+       {
+        "pk": 2698,
+        "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+       }
+      ],
+      "used_proxies": [],
+      "current_proxy": {
+       "pk": 2248,
+       "url": "http://nn9Sr7PP:JSFEWTFX@46.151.177.20:64420"
+      }
+     },
+     "get_phone": {
+      "phone": "+34637777217",
+      "country": "SPAIN",
+      "phone_data": {
+       "sms_id": "105719646",
+       "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+       "sms_service": "online_sim"
+      }
+     },
+     "last_action": "reg_in_service",
+     "bio_generate": {
+      "sex": 1,
+      "last_name": "Farrell",
+      "first_name": "Sandra",
+      "image_bs64": "",
+      "date_of_birth": "1997-08-16T00:00:00"
+     },
+     "save_bot_info": "ok",
+     "reg_in_service": {
+      "service": "proton_mail",
+      "password": ")0VZpO2j6T",
+      "username": "1997hallmary@proton.me",
+      "phone_number": "+34637777217"
+     },
+     "reg_required_account": [
+      {
+       "pk": 277,
+       "model": "lemmings_app.botaccount",
+       "fields": {
+        "sex": "0",
+        "chain": 12,
+        "email": null,
+        "extra": {
+         "error": null,
+         "proxy": {
+          "proxies": [
+           {
+            "pk": 2706,
+            "url": "http://nn9Sr7PP:JSFEWTFX@45.152.215.250:64000"
+           },
+           {
+            "pk": 2702,
+            "url": "http://nn9Sr7PP:JSFEWTFX@45.140.62.55:63256"
+           },
+           {
+            "pk": 2698,
+            "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+           }
+          ],
+          "used_proxies": [],
+          "current_proxy": {
+           "pk": 2698,
+           "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+          }
+         },
+         "bot_info": {
+          "error": null,
+          "proxy": {
+           "proxies": [
+            {
+             "pk": 2706,
+             "url": "http://nn9Sr7PP:JSFEWTFX@45.152.215.250:64000"
+            },
+            {
+             "pk": 2702,
+             "url": "http://nn9Sr7PP:JSFEWTFX@45.140.62.55:63256"
+            },
+            {
+             "pk": 2698,
+             "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+            }
+           ],
+           "used_proxies": [],
+           "current_proxy": {
+            "pk": 2698,
+            "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+           }
+          },
+          "get_phone": {
+           "phone": "+79063315983",
+           "country": "RUSSIA",
+           "phone_data": {
+            "sms_id": "105719149",
+            "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+            "sms_service": "online_sim"
+           }
+          },
+          "last_action": "reg_in_service",
+          "bio_generate": {
+           "sex": 0,
+           "last_name": "Farrell",
+           "first_name": "Roy",
+           "image_bs64": "",
+           "date_of_birth": "1979-01-12T00:00:00"
+          },
+          "save_bot_info": "ok",
+          "reg_in_service": {
+           "service": "mail_ru",
+           "password": "JsidXDytjFKlVBJL",
+           "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+           "extra_data": {
+            "sex": 1,
+            "cookies": {
+             "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+             "s": "m_light=1|new_light=1",
+             "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+             "act": "291c98b4199b477cb844670403bb775a",
+             "oid": "71jZVnbHEaufrnb8T2Qcv",
+             "Mpop": "1695626014:05744950050473411905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+             "mrcu": "0F41651132FC37632E13641AE82E",
+             "mrhc": "vvZpXCwHCJ8flni96vCCVjfICHxrXxdhdZqSKO8oj/Q=",
+             "sdcs": "sl1:1695626001:PZLtBIgwEp5pmkdNGEqKaKvM94EWSqZuiUW-C3bL7iE",
+             "ssdc": "e4e00a5ae7f6441eb28de4209d8cc9fd",
+             "GarageID": "79517f1b6333474fb8b9136a7f34a75a",
+             "ssdc_info": "e4e0:0:1695625996",
+             "posts_subscriptions": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru"
+            },
+            "last_name": "Farrell",
+            "first_name": "Roy"
+           },
+           "phone_number": "+79063315983",
+           "imap_password": "vrMySe5vUr84LeC7afys"
+          },
+          "reg_required_account": []
+         },
+         "get_phone": {
+          "phone": "+79063315983",
+          "country": "RUSSIA",
+          "phone_data": {
+           "sms_id": "105719149",
+           "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+           "sms_service": "online_sim"
+          }
+         },
+         "last_action": "login_account",
+         "bio_generate": {
+          "sex": 0,
+          "last_name": "Farrell",
+          "first_name": "Roy",
+          "date_of_birth": "1979-01-12T00:00:00"
+         },
+         "login_account": {
+          "login": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+          "cookies": {
+           "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+           "s": "new_light=1",
+           "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+           "act": "56541339b9304cc497d977f2d8852bcb",
+           "oid": "52N1ZDqqXzUqzrL4yFzfC",
+           "Mpop": "1695626367:58584902776051471905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+           "mrcu": "268E6511347B4ECAB0C4641AE82E",
+           "mrhc": "9ctcXTVUBMxXZHRKLPxAOM6v5V6Qg7lTbQ55OPzaxIE=",
+           "sdcs": "sl1:1695626367:s1aV1YgPqMJqeg3gvCzXP1jJLeowMIm5EmNwgjSgjZo",
+           "ssdc": "8596c3a7bf6d400ba98766b17088f7e4",
+           "GarageID": "ab7b905a52044504af1c7d4e868eb9d9",
+           "ssdc_info": "8596:0:1695626366"
+          },
+          "password": "JsidXDytjFKlVBJL"
+         },
+         "save_bot_info": "ok",
+         "reg_in_service": {
+          "service": "mail_ru",
+          "password": "JsidXDytjFKlVBJL",
+          "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+          "extra_data": {
+           "sex": 1,
+           "cookies": {
+            "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+            "s": "m_light=1|new_light=1",
+            "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+            "act": "291c98b4199b477cb844670403bb775a",
+            "oid": "71jZVnbHEaufrnb8T2Qcv",
+            "Mpop": "1695626014:05744950050473411905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+            "mrcu": "0F41651132FC37632E13641AE82E",
+            "mrhc": "vvZpXCwHCJ8flni96vCCVjfICHxrXxdhdZqSKO8oj/Q=",
+            "sdcs": "sl1:1695626001:PZLtBIgwEp5pmkdNGEqKaKvM94EWSqZuiUW-C3bL7iE",
+            "ssdc": "e4e00a5ae7f6441eb28de4209d8cc9fd",
+            "GarageID": "79517f1b6333474fb8b9136a7f34a75a",
+            "ssdc_info": "e4e0:0:1695625996",
+            "posts_subscriptions": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru"
+           },
+           "last_name": "Farrell",
+           "first_name": "Roy"
+          },
+          "phone_number": "+79063315983",
+          "imap_password": "vrMySe5vUr84LeC7afys"
+         },
+         "reg_required_account": []
+        },
+        "api_id": "",
+        "changed": "2023-09-25T07:19:32.113Z",
+        "created": "2023-09-25T07:12:53.952Z",
+        "service": "MAIL_RU",
+        "api_hash": "",
+        "location": null,
+        "password": "JsidXDytjFKlVBJL",
+        "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+        "last_name": "Farrell",
+        "dependency": true,
+        "first_name": "Roy",
+        "api_session": "",
+        "create_type": "",
+        "behavior_bot": null,
+        "phone_number": "+79063315983",
+        "account_state": "READY",
+        "date_of_birth": "1979-01-12",
+        "last_traceback": "",
+        "needs_new_mail": false,
+        "service_account": false,
+        "required_account": null,
+        "successful_auth_date": "2023-09-25T07:19:31.932Z",
+        "enable_behavior_emulation": false
+       }
+      }
+     ]
+    },
+    "get_phone": {
+     "phone": "+34637777217",
+     "country": "SPAIN",
+     "phone_data": {
+      "sms_id": "105719646",
+      "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+      "sms_service": "online_sim"
+     }
+    },
+    "last_action": "login_account",
+    "bio_generate": {
+     "sex": 1,
+     "last_name": "Farrell",
+     "first_name": "Sandra",
+     "date_of_birth": "1997-08-16T00:00:00"
+    },
+    "login_account": {
+     "phone": "+34637777217",
+     "password": ")0VZpO2j6T",
+     "username": "1997hallmary@proton.me"
+    },
+    "save_bot_info": "ok",
+    "reg_in_service": {
+     "service": "proton_mail",
+     "password": ")0VZpO2j6T",
+     "username": "1997hallmary@proton.me",
+     "phone_number": "+34637777217"
+    },
+    "reg_required_account": [
+     {
+      "pk": 277,
+      "model": "lemmings_app.botaccount",
+      "fields": {
+       "sex": "0",
+       "chain": 12,
+       "email": null,
+       "extra": {
+        "error": null,
+        "proxy": {
+         "proxies": [
+          {
+           "pk": 2706,
+           "url": "http://nn9Sr7PP:JSFEWTFX@45.152.215.250:64000"
+          },
+          {
+           "pk": 2702,
+           "url": "http://nn9Sr7PP:JSFEWTFX@45.140.62.55:63256"
+          },
+          {
+           "pk": 2698,
+           "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+          }
+         ],
+         "used_proxies": [],
+         "current_proxy": {
+          "pk": 2698,
+          "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+         }
+        },
+        "bot_info": {
+         "error": null,
+         "proxy": {
+          "proxies": [
+           {
+            "pk": 2706,
+            "url": "http://nn9Sr7PP:JSFEWTFX@45.152.215.250:64000"
+           },
+           {
+            "pk": 2702,
+            "url": "http://nn9Sr7PP:JSFEWTFX@45.140.62.55:63256"
+           },
+           {
+            "pk": 2698,
+            "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+           }
+          ],
+          "used_proxies": [],
+          "current_proxy": {
+           "pk": 2698,
+           "url": "http://nn9Sr7PP:JSFEWTFX@46.232.26.100:63804"
+          }
+         },
+         "get_phone": {
+          "phone": "+79063315983",
+          "country": "RUSSIA",
+          "phone_data": {
+           "sms_id": "105719149",
+           "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+           "sms_service": "online_sim"
+          }
+         },
+         "last_action": "reg_in_service",
+         "bio_generate": {
+          "sex": 0,
+          "last_name": "Farrell",
+          "first_name": "Roy",
+          "image_bs64": "",
+          "date_of_birth": "1979-01-12T00:00:00"
+         },
+         "save_bot_info": "ok",
+         "reg_in_service": {
+          "service": "mail_ru",
+          "password": "JsidXDytjFKlVBJL",
+          "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+          "extra_data": {
+           "sex": 1,
+           "cookies": {
+            "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+            "s": "m_light=1|new_light=1",
+            "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+            "act": "291c98b4199b477cb844670403bb775a",
+            "oid": "71jZVnbHEaufrnb8T2Qcv",
+            "Mpop": "1695626014:05744950050473411905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+            "mrcu": "0F41651132FC37632E13641AE82E",
+            "mrhc": "vvZpXCwHCJ8flni96vCCVjfICHxrXxdhdZqSKO8oj/Q=",
+            "sdcs": "sl1:1695626001:PZLtBIgwEp5pmkdNGEqKaKvM94EWSqZuiUW-C3bL7iE",
+            "ssdc": "e4e00a5ae7f6441eb28de4209d8cc9fd",
+            "GarageID": "79517f1b6333474fb8b9136a7f34a75a",
+            "ssdc_info": "e4e0:0:1695625996",
+            "posts_subscriptions": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru"
+           },
+           "last_name": "Farrell",
+           "first_name": "Roy"
+          },
+          "phone_number": "+79063315983",
+          "imap_password": "vrMySe5vUr84LeC7afys"
+         },
+         "reg_required_account": []
+        },
+        "get_phone": {
+         "phone": "+79063315983",
+         "country": "RUSSIA",
+         "phone_data": {
+          "sms_id": "105719149",
+          "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+          "sms_service": "online_sim"
+         }
+        },
+        "last_action": "login_account",
+        "bio_generate": {
+         "sex": 0,
+         "last_name": "Farrell",
+         "first_name": "Roy",
+         "date_of_birth": "1979-01-12T00:00:00"
+        },
+        "login_account": {
+         "login": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+         "cookies": {
+          "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+          "s": "new_light=1",
+          "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+          "act": "56541339b9304cc497d977f2d8852bcb",
+          "oid": "52N1ZDqqXzUqzrL4yFzfC",
+          "Mpop": "1695626367:58584902776051471905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+          "mrcu": "268E6511347B4ECAB0C4641AE82E",
+          "mrhc": "9ctcXTVUBMxXZHRKLPxAOM6v5V6Qg7lTbQ55OPzaxIE=",
+          "sdcs": "sl1:1695626367:s1aV1YgPqMJqeg3gvCzXP1jJLeowMIm5EmNwgjSgjZo",
+          "ssdc": "8596c3a7bf6d400ba98766b17088f7e4",
+          "GarageID": "ab7b905a52044504af1c7d4e868eb9d9",
+          "ssdc_info": "8596:0:1695626366"
+         },
+         "password": "JsidXDytjFKlVBJL"
+        },
+        "save_bot_info": "ok",
+        "reg_in_service": {
+         "service": "mail_ru",
+         "password": "JsidXDytjFKlVBJL",
+         "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+         "extra_data": {
+          "sex": 1,
+          "cookies": {
+           "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+           "s": "m_light=1|new_light=1",
+           "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+           "act": "291c98b4199b477cb844670403bb775a",
+           "oid": "71jZVnbHEaufrnb8T2Qcv",
+           "Mpop": "1695626014:05744950050473411905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+           "mrcu": "0F41651132FC37632E13641AE82E",
+           "mrhc": "vvZpXCwHCJ8flni96vCCVjfICHxrXxdhdZqSKO8oj/Q=",
+           "sdcs": "sl1:1695626001:PZLtBIgwEp5pmkdNGEqKaKvM94EWSqZuiUW-C3bL7iE",
+           "ssdc": "e4e00a5ae7f6441eb28de4209d8cc9fd",
+           "GarageID": "79517f1b6333474fb8b9136a7f34a75a",
+           "ssdc_info": "e4e0:0:1695625996",
+           "posts_subscriptions": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru"
+          },
+          "last_name": "Farrell",
+          "first_name": "Roy"
+         },
+         "phone_number": "+79063315983",
+         "imap_password": "vrMySe5vUr84LeC7afys"
+        },
+        "reg_required_account": []
+       },
+       "api_id": "",
+       "changed": "2023-09-25T07:19:32.113Z",
+       "created": "2023-09-25T07:12:53.952Z",
+       "service": "MAIL_RU",
+       "api_hash": "",
+       "location": null,
+       "password": "JsidXDytjFKlVBJL",
+       "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+       "last_name": "Farrell",
+       "dependency": true,
+       "first_name": "Roy",
+       "api_session": "",
+       "create_type": "",
+       "behavior_bot": null,
+       "phone_number": "+79063315983",
+       "account_state": "READY",
+       "date_of_birth": "1979-01-12",
+       "last_traceback": "",
+       "needs_new_mail": false,
+       "service_account": false,
+       "required_account": null,
+       "successful_auth_date": "2023-09-25T07:19:31.932Z",
+       "enable_behavior_emulation": false
+      }
+     }
+    ]
+   },
+   "behavior_bot": null,
+   "sex": "1",
+   "date_of_birth": "1997-08-16",
+   "first_name": "Sandra",
+   "last_name": "Farrell",
+   "last_traceback": "",
+   "enable_behavior_emulation": false,
+   "dependency": false,
+   "required_account": 277,
+   "changed": "2023-09-25T07:25:06.755Z",
+   "created": "2023-09-25T07:12:50.984Z",
+   "api_id": "",
+   "api_hash": "",
+   "api_session": "",
+   "service_account": false,
+   "account_state": "READY",
+   "create_type": "",
+   "successful_auth_date": "2023-09-25T07:25:05.789Z"
+  }
+ },
+ {
+  "model": "lemmings_app.botaccount",
+  "pk": 277,
+  "fields": {
+   "chain": 12,
+   "service": "MAIL_RU",
+   "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+   "password": "JsidXDytjFKlVBJL",
+   "phone_number": "+79063315983",
+   "location": null,
+   "needs_new_mail": false,
+   "email": null,
+   "extra": {
+    "error": null,
+    "proxy": {
+      "proxies": [],
+      "used_proxies": [],
+      "current_proxy": null
+     },
+    "bot_info": {
+     "error": null,
+     "proxy": {
+      "proxies": [],
+      "used_proxies": [],
+      "current_proxy": null
+     },
+     "get_phone": {
+      "phone": "+79063315983",
+      "country": "RUSSIA",
+      "phone_data": {
+       "sms_id": "105719149",
+       "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+       "sms_service": "online_sim"
+      }
+     },
+     "last_action": "reg_in_service",
+     "bio_generate": {
+      "sex": 0,
+      "last_name": "Farrell",
+      "first_name": "Roy",
+      "image_bs64": "",
+      "date_of_birth": "1979-01-12T00:00:00"
+     },
+     "save_bot_info": "ok",
+     "reg_in_service": {
+      "service": "mail_ru",
+      "password": "JsidXDytjFKlVBJL",
+      "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+      "extra_data": {
+       "sex": 1,
+       "cookies": {
+        "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+        "s": "m_light=1|new_light=1",
+        "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+        "act": "291c98b4199b477cb844670403bb775a",
+        "oid": "71jZVnbHEaufrnb8T2Qcv",
+        "Mpop": "1695626014:05744950050473411905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+        "mrcu": "0F41651132FC37632E13641AE82E",
+        "mrhc": "vvZpXCwHCJ8flni96vCCVjfICHxrXxdhdZqSKO8oj/Q=",
+        "sdcs": "sl1:1695626001:PZLtBIgwEp5pmkdNGEqKaKvM94EWSqZuiUW-C3bL7iE",
+        "ssdc": "e4e00a5ae7f6441eb28de4209d8cc9fd",
+        "GarageID": "79517f1b6333474fb8b9136a7f34a75a",
+        "ssdc_info": "e4e0:0:1695625996",
+        "posts_subscriptions": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru"
+       },
+       "last_name": "Farrell",
+       "first_name": "Roy"
+      },
+      "phone_number": "+79063315983",
+      "imap_password": "vrMySe5vUr84LeC7afys"
+     },
+     "reg_required_account": []
+    },
+    "get_phone": {
+     "phone": "+79063315983",
+     "country": "RUSSIA",
+     "phone_data": {
+      "sms_id": "105719149",
+      "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+      "sms_service": "online_sim"
+     }
+    },
+    "last_action": "login_account",
+    "bio_generate": {
+     "sex": 0,
+     "last_name": "Farrell",
+     "first_name": "Roy",
+     "date_of_birth": "1979-01-12T00:00:00"
+    },
+    "login_account": {
+     "login": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+     "cookies": {
+      "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+      "s": "new_light=1",
+      "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+      "act": "56541339b9304cc497d977f2d8852bcb",
+      "oid": "52N1ZDqqXzUqzrL4yFzfC",
+      "Mpop": "1695626367:58584902776051471905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+      "mrcu": "268E6511347B4ECAB0C4641AE82E",
+      "mrhc": "9ctcXTVUBMxXZHRKLPxAOM6v5V6Qg7lTbQ55OPzaxIE=",
+      "sdcs": "sl1:1695626367:s1aV1YgPqMJqeg3gvCzXP1jJLeowMIm5EmNwgjSgjZo",
+      "ssdc": "8596c3a7bf6d400ba98766b17088f7e4",
+      "GarageID": "ab7b905a52044504af1c7d4e868eb9d9",
+      "ssdc_info": "8596:0:1695626366"
+     },
+     "password": "JsidXDytjFKlVBJL"
+    },
+    "save_bot_info": "ok",
+    "reg_in_service": {
+     "service": "mail_ru",
+     "password": "JsidXDytjFKlVBJL",
+     "username": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru",
+     "extra_data": {
+      "sex": 1,
+      "cookies": {
+       "o": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:2256:GFAQAg==.s",
+       "s": "m_light=1|new_light=1",
+       "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+       "act": "291c98b4199b477cb844670403bb775a",
+       "oid": "71jZVnbHEaufrnb8T2Qcv",
+       "Mpop": "1695626014:05744950050473411905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+       "mrcu": "0F41651132FC37632E13641AE82E",
+       "mrhc": "vvZpXCwHCJ8flni96vCCVjfICHxrXxdhdZqSKO8oj/Q=",
+       "sdcs": "sl1:1695626001:PZLtBIgwEp5pmkdNGEqKaKvM94EWSqZuiUW-C3bL7iE",
+       "ssdc": "e4e00a5ae7f6441eb28de4209d8cc9fd",
+       "GarageID": "79517f1b6333474fb8b9136a7f34a75a",
+       "ssdc_info": "e4e0:0:1695625996",
+       "posts_subscriptions": "ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru"
+      },
+      "last_name": "Farrell",
+      "first_name": "Roy"
+     },
+     "phone_number": "+79063315983",
+     "imap_password": "vrMySe5vUr84LeC7afys"
+    },
+    "reg_required_account": []
+   },
+   "behavior_bot": null,
+   "sex": "0",
+   "date_of_birth": "1979-01-12",
+   "first_name": "Roy",
+   "last_name": "Farrell",
+   "last_traceback": "",
+   "enable_behavior_emulation": false,
+   "dependency": true,
+   "required_account": null,
+   "changed": "2023-09-25T07:19:32.113Z",
+   "created": "2023-09-25T07:12:53.952Z",
+   "api_id": "",
+   "api_hash": "",
+   "api_session": "",
+   "service_account": false,
+   "account_state": "READY",
+   "create_type": "",
+   "successful_auth_date": "2023-09-25T07:19:31.932Z"
+  }
+ },
+ {
+  "model": "lemmings_app.botaccount",
+  "pk": 278,
+  "fields": {
+   "chain": 12,
+   "service": "MAIL_RU",
+   "username": "testuser@mail.ru",
+   "password": "JsidXDytjFKlVBJL",
+   "phone_number": "+79063315984",
+   "location": "Россия",
+   "needs_new_mail": false,
+   "email": null,
+   "extra": {
+    "error": null,
+    "proxy": {
+      "proxies": [],
+      "used_proxies": [],
+      "current_proxy": null
+     },
+    "bot_info": {
+     "error": null,
+     "proxy": {
+      "proxies": [],
+      "used_proxies": [],
+      "current_proxy": null
+     },
+     "get_phone": {
+      "phone": "+79063315984",
+      "country": "RUSSIA",
+      "phone_data": {
+       "sms_id": "105719149",
+       "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+       "sms_service": "online_sim"
+      }
+     },
+     "last_action": "reg_in_service",
+     "bio_generate": {
+      "sex": 0,
+      "last_name": "Farrell",
+      "first_name": "Roy",
+      "image_bs64": "",
+      "date_of_birth": "1979-01-12T00:00:00"
+     },
+     "save_bot_info": "ok",
+     "reg_in_service": {
+      "service": "mail_ru",
+      "password": "JsidXDytjFKlVBJL",
+      "username": "testuser@mail.ru",
+      "extra_data": {
+       "sex": 1,
+       "cookies": {
+        "o": "testuser@mail.ru:2256:GFAQAg==.s",
+        "s": "m_light=1|new_light=1",
+        "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+        "act": "291c98b4199b477cb844670403bb775a",
+        "oid": "71jZVnbHEaufrnb8T2Qcv",
+        "Mpop": "1695626014:05744950050473411905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+        "mrcu": "0F41651132FC37632E13641AE82E",
+        "mrhc": "vvZpXCwHCJ8flni96vCCVjfICHxrXxdhdZqSKO8oj/Q=",
+        "sdcs": "sl1:1695626001:PZLtBIgwEp5pmkdNGEqKaKvM94EWSqZuiUW-C3bL7iE",
+        "ssdc": "e4e00a5ae7f6441eb28de4209d8cc9fd",
+        "GarageID": "79517f1b6333474fb8b9136a7f34a75a",
+        "ssdc_info": "e4e0:0:1695625996",
+        "posts_subscriptions": "testuser@mail.ru"
+       },
+       "last_name": "Farrell",
+       "first_name": "Roy"
+      },
+      "phone_number": "+79063315984",
+      "imap_password": "vrMySe5vUr84LeC7afys"
+     },
+     "reg_required_account": []
+    },
+    "get_phone": {
+     "phone": "+79063315984",
+     "country": "RUSSIA",
+     "phone_data": {
+      "sms_id": "105719149",
+      "api_key": "74a59caa9bad48e310b9ff4dc1ae7cce",
+      "sms_service": "online_sim"
+     }
+    },
+    "last_action": "login_account",
+    "bio_generate": {
+     "sex": 0,
+     "last_name": "Farrell",
+     "first_name": "Roy",
+     "date_of_birth": "1979-01-12T00:00:00"
+    },
+    "login_account": {
+     "login": "testuser@mail.ru0",
+     "cookies": {
+      "o": "testuser@mail.ru:2256:GFAQAg==.s",
+      "s": "new_light=1",
+      "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+      "act": "56541339b9304cc497d977f2d8852bcb",
+      "oid": "52N1ZDqqXzUqzrL4yFzfC",
+      "Mpop": "1695626367:58584902776051471905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+      "mrcu": "268E6511347B4ECAB0C4641AE82E",
+      "mrhc": "9ctcXTVUBMxXZHRKLPxAOM6v5V6Qg7lTbQ55OPzaxIE=",
+      "sdcs": "sl1:1695626367:s1aV1YgPqMJqeg3gvCzXP1jJLeowMIm5EmNwgjSgjZo",
+      "ssdc": "8596c3a7bf6d400ba98766b17088f7e4",
+      "GarageID": "ab7b905a52044504af1c7d4e868eb9d9",
+      "ssdc_info": "8596:0:1695626366"
+     },
+     "password": "JsidXDytjFKlVBJL"
+    },
+    "save_bot_info": "ok",
+    "reg_in_service": {
+     "service": "mail_ru",
+     "password": "JsidXDytjFKlVBJL",
+     "username": "testuser@mail.ru",
+     "extra_data": {
+      "sex": 1,
+      "cookies": {
+       "o": "testuser@mail.ru:2256:GFAQAg==.s",
+       "s": "m_light=1|new_light=1",
+       "t": "obLD1AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAQAAACAAAwBuwcA",
+       "act": "291c98b4199b477cb844670403bb775a",
+       "oid": "71jZVnbHEaufrnb8T2Qcv",
+       "Mpop": "1695626014:05744950050473411905000017031f051c054f6c5150445e05190401041d445e0652460a5f0d4257054e514441095c40435b485e5241405e5c4e5b5f4f175e575a5a17454d:ug6ew3f5sg4ydst8hwzjxhjsrfewjfz@mail.ru:",
+       "mrcu": "0F41651132FC37632E13641AE82E",
+       "mrhc": "vvZpXCwHCJ8flni96vCCVjfICHxrXxdhdZqSKO8oj/Q=",
+       "sdcs": "sl1:1695626001:PZLtBIgwEp5pmkdNGEqKaKvM94EWSqZuiUW-C3bL7iE",
+       "ssdc": "e4e00a5ae7f6441eb28de4209d8cc9fd",
+       "GarageID": "79517f1b6333474fb8b9136a7f34a75a",
+       "ssdc_info": "e4e0:0:1695625996",
+       "posts_subscriptions": "testuser@mail.ru"
+      },
+      "last_name": "Farrell",
+      "first_name": "Roy"
+     },
+     "phone_number": "+79063315983",
+     "imap_password": "vrMySe5vUr84LeC7afys"
+    },
+    "reg_required_account": []
+   },
+   "behavior_bot": null,
+   "sex": "0",
+   "date_of_birth": "1979-01-12",
+   "first_name": "Roy",
+   "last_name": "Farrell",
+   "last_traceback": "",
+   "enable_behavior_emulation": false,
+   "dependency": true,
+   "required_account": null,
+   "changed": "2023-09-25T07:19:32.113Z",
+   "created": "2023-09-25T07:12:53.952Z",
+   "api_id": "",
+   "api_hash": "",
+   "api_session": "",
+   "service_account": false,
+   "account_state": "READY",
+   "create_type": "",
+   "successful_auth_date": "2023-09-25T07:19:31.932Z"
+  }
+ }
+]

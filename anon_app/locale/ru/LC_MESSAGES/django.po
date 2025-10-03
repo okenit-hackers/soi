@@ -1,0 +1,423 @@
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# Ivan Ivaschenko <defuz.net@gmail.com>, 2013
+# Denis Darii <denis.darii@gmail.com>, 2011
+# Dimmus <dmitri.chudinov@gmail.com>, 2011
+# Eugene <eugene.mechanism@gmail.com>, 2016-2017
+# crazyzubr <hjcnbckfd@gmail.com>, 2020
+# Sergey <inoks@mail.ru>, 2016
+# Jannis Leidel <jannis@leidel.info>, 2011
+# SeryiMysh <vital@dorokhin.kz>, 2020
+# Алексей Борискин <sun.void@gmail.com>, 2012-2015
+# Дмитрий <nerosketch@gmail.com>, 2019
+# Дмитрий Шатера <mr.bobsans@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-14 19:53+0200\n"
+"PO-Revision-Date: 2020-07-21 09:32+0000\n"
+"Last-Translator: crazyzubr <hjcnbckfd@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/django/django/language/"
+"ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+msgid "Anon App"
+msgstr "Анонимизация"
+
+msgid "App Image"
+msgstr "Образ ПО для выходных узлов"
+
+msgid "app image"
+msgstr "образ ПО для выходного узла"
+
+msgid "App Images"
+msgstr "Образы ПО для выходных узлов"
+
+msgid "Proxy"
+msgstr "Proxy сервер"
+
+msgid "Proxies"
+msgstr "Proxy серверы"
+
+msgid "proxies"
+msgstr "proxy серверы"
+
+msgid "Hosting"
+msgstr "Хостинг"
+
+msgid "hosting"
+msgstr "хостинг"
+
+msgid "Hostings"
+msgstr "Хостинги"
+
+msgid "Server"
+msgstr "Сервер"
+
+msgid "server"
+msgstr "сервер"
+
+msgid "Servers"
+msgstr "Серверы"
+
+msgid "Server Account"
+msgstr "Аккаунт сервера"
+
+msgid "Server Accounts"
+msgstr "Аккаунты сервера"
+
+msgid "Node"
+msgstr "Узел цепочки анонимизации"
+
+msgid "Nodes"
+msgstr "Узлы цепочек анонимизации"
+
+msgid "Edge"
+msgstr "Связь узлов цепочки анонимизации"
+
+msgid "Edges"
+msgstr "Связи узлов цепочек анонимизации"
+
+msgid "Chain"
+msgstr "Цепочка анонимизации"
+
+msgid "Chain for check"
+msgstr "Цепочка анонимизации для проверки"
+
+msgid "chain"
+msgstr "цепочка анонимизации"
+
+msgid "Chains"
+msgstr "Цепочки анонимизации"
+
+msgid "Hosting account"
+msgstr "Аккаунт хостинга"
+
+msgid "Hosting accounts"
+msgstr "Аккаунты хостингов"
+
+msgid "protocol"
+msgstr "протокол"
+
+msgid "username"
+msgstr "имя пользователя"
+
+msgid "password"
+msgstr "пароль"
+
+msgid "ip"
+msgstr "IP адрес"
+
+msgid "port"
+msgstr "порт"
+
+msgid "location"
+msgstr "местоположение"
+
+msgid "name"
+msgstr "наименование"
+
+msgid "hosting url"
+msgstr "URL хостинга"
+
+msgid "ssh port"
+msgstr "порт ssh"
+
+msgid "ssh proc port"
+msgstr "порт проброса ssh"
+
+msgid "ssh private key"
+msgstr "Закрытый ключ ssh"
+
+msgid "ssh public key"
+msgstr "Открытый ключ ssh"
+
+msgid "in_node"
+msgstr "узел назначения"
+
+msgid "out_node"
+msgstr "узел источник"
+
+msgid "title"
+msgstr "наименование"
+
+msgid "task queue name"
+msgstr "наименование очереди"
+
+msgid "status"
+msgstr "статус"
+
+msgid "activity"
+msgstr "активность"
+
+msgid "ssh container private key"
+msgstr "закрытый ключ ssh для контейнера"
+
+msgid "ssh container public key"
+msgstr "открытый ключ ssh для контейнера"
+
+msgid "external ssh container port"
+msgstr "внешний порт ssh для контейнера"
+
+msgid "internal ssh container port"
+msgstr "внутренний порт ssh для контейнера"
+
+msgid "image name"
+msgstr "название образа docker"
+
+msgid "image"
+msgstr "образ"
+
+msgid "environment variable"
+msgstr "переменные среды окружения"
+
+msgid "browser profiles"
+msgstr "профиль браузера"
+
+msgid "Rebuild tunnel"
+msgstr "Перестроить цепочку"
+
+msgid "Reload & Rebuild tunnel"
+msgstr "Обновить образ и перестроить цепочку"
+
+msgid "Testing"
+msgstr "Протестировать"
+
+msgid "OpenVPN network"
+msgstr "Сеть OpenVPN"
+
+msgid "OpenVPN netmask"
+msgstr "Маска сети OpenVPN"
+
+msgid "OpenVPN port"
+msgstr "Порт OpenVPN"
+
+msgid "Subnet which is routed to OpenVPN network"
+msgstr "Подсеть которая направляется в сеть OpenVPN"
+
+msgid "Mask of subnet which is routed to OpenVPN network"
+msgstr "Маска подсети которая направляется в сеть OpenVPN"
+
+msgid "OpenVPN client name"
+msgstr "Имя клиента OpenVPN"
+
+msgid "OpenVPN client config file"
+msgstr "Конфигурационный файл клиента OpenVPN"
+
+msgid "OpenVPN clients"
+msgstr "Клиенты OpenVPN"
+
+msgid "OpenVPN client"
+msgstr "Клиент OpenVPN"
+
+msgid "Client IP in OpenVPN network"
+msgstr "IP клиента в сети OpenVPN"
+
+msgid "Server IP in OpenVPN network"
+msgstr "IP сервера в сети OpenVPN"
+
+msgid "is for access to private network"
+msgstr "Системный"
+
+msgid "zabbix client config"
+msgstr "Конфигурационный файл клиента zabbix"
+
+msgid "forwarded zabbix port"
+msgstr "Проброшенный порт zabbix сервера"
+
+msgid "geo"
+msgstr "Географическое положение"
+
+msgid "Check proxies state"
+msgstr "Проверить состояние Proxy серверов"
+
+msgid "Proxy state"
+msgstr "Состояние Proxy сервера"
+
+msgid "alive"
+msgstr "доступен"
+
+msgid "died"
+msgstr "недоступен"
+
+msgid "unknown"
+msgstr "неизвестно"
+
+msgid "checking"
+msgstr "проверяется"
+
+msgid "checking failed"
+msgstr "проверка завершилась ошибкой"
+
+msgid "Celery task id"
+msgstr "ID задачи"
+
+msgid "docker-compose"
+msgstr "Файл docker-compose"
+
+msgid "filebeat config"
+msgstr "Конфигурация Filebeat"
+
+msgid "Use for access to private network"
+msgstr "Использовать для подключения к внутренней сети"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "File type"
+msgstr "Тип файла"
+
+msgid "Delimiter"
+msgstr "Разделитель файла"
+
+msgid "Tab symbol"
+msgstr "Знак табуляции"
+
+msgid "Semicolon"
+msgstr "Точка с запятой"
+
+msgid "Colon"
+msgstr "Двоеточие"
+
+msgid "Comma"
+msgstr "Запятая"
+
+msgid "Paid proxy"
+msgstr "Платный прокси"
+
+msgid "Free proxy"
+msgstr "Бесплатный прокси"
+
+msgid "Secure flag"
+msgstr "Надежность"
+
+msgid "Check proxies"
+msgstr "Проверить прокси сервера"
+
+msgid "Applying"
+msgstr "Использование"
+
+msgid "Number of applying"
+msgstr "Количество использований"
+
+msgid "Disposable proxy"
+msgstr "Одноразовый"
+
+msgid "Reusable proxy"
+msgstr "Многоразовый"
+
+msgid "Used proxy"
+msgstr "Использованный"
+
+msgid "Unused proxy"
+msgstr "Неиспользованный"
+
+msgid "source"
+msgstr "Источник"
+
+msgid "Protocol"
+msgstr "Протокол"
+
+msgid "CSV format"
+msgstr "Формат CSV файла"
+
+msgid "Comment"
+msgstr "Комментарий"
+
+msgid "Ping"
+msgstr "Задержка"
+
+msgid "Uploading speed"
+msgstr "Скорость загрузки"
+
+msgid "Downloading speed"
+msgstr "Скорость скачивания"
+
+msgid "Last testing datetime"
+msgstr "Время последнего тестирования"
+
+msgid "Last proxy testing datetime"
+msgstr "Время последней проверки прокси"
+
+msgid "Last successful proxy testing datetime"
+msgstr "Время последней успешной проверки прокси"
+
+msgid "Building ovpn connection started."
+msgstr "Построение OpenVPN соединения запущенно"
+
+msgid "Creating ovpn config."
+msgstr "Создание конфигурации OpenVPN"
+
+msgid "Tunnel rebuilding started"
+msgstr "Построение цепочки запущенно"
+
+msgid "Proxy limit"
+msgstr "Лимит прокси"
+
+msgid "Check proxy limit"
+msgstr "Проверять лимит прокси"
+
+msgid "Internet access chain"
+msgstr "Для доступа в интернет"
+
+msgid "Configuration file OpenVPN"
+msgstr "Конфигурационный файл OpenVPN"
+
+msgid "Use proxies chain"
+msgstr "Использовать цепочку из прокси серверов"
+
+msgid "Amount of proxies for building proxies chain"
+msgstr "Количество прокси серверов для построения цепи"
+
+msgid "Is it necessary to create a pool of accounts?"
+msgstr "Необходимо ли создавать пулл аккаунтов?"
+
+msgid "Is powerful?"
+msgstr "Мощный сервер?"
+
+msgid "concurrency"
+msgstr "Количество потоков на цепочке"
+
+msgid "default 0 - one thread one core"
+msgstr "По-умолчанию 0 - один поток одно ядро"
+
+msgid "rebuild chains with reload"
+msgstr "Перестроить цепочки с обновлением образа"
+
+msgid "rebuild chains"
+msgstr "Перестроить цепочки"
+
+msgid "type"
+msgstr "Тип"
+
+msgid "anonymization chain"
+msgstr "Цепочка анонимизации"
+
+msgid "Entry"
+msgstr "Входной"
+
+msgid "Output"
+msgstr "Выходной"
+
+msgid "Intermediate"
+msgstr "Промежуточный"
+
+msgid "role in chain"
+msgstr "Роль в цепочке"
+
+msgid "Was issued"
+msgstr "Был выдан"
+
+msgid "Issued to whom"
+msgstr "Кому выдан"
+
+msgid "Rebuild private connection"
+msgstr "Перестроить соединение к внутренней сети"

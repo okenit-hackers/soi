@@ -1,0 +1,1448 @@
+[
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "admin",
+  "model": "logentry"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "auth",
+  "model": "permission"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "auth",
+  "model": "group"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "auth",
+  "model": "user"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "contenttypes",
+  "model": "contenttype"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "sessions",
+  "model": "session"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "authtoken",
+  "model": "token"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "authtoken",
+  "model": "tokenproxy"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "chain"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "hosting"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "server"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "srvaccount"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "node"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "hostingaccount"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "edge"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "appimage"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "proxy"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "anon_app",
+  "model": "openvpnclient"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "lemmings_app",
+  "model": "lemmingstask"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "lemmings_app",
+  "model": "botaccount"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "lemmings_app",
+  "model": "accountpoolsetting"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "ledger_app",
+  "model": "currency"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "ledger_app",
+  "model": "paidservice"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "ledger_app",
+  "model": "serviceaccount"
+ }
+ },
+ {
+ "model": "contenttypes.contenttype",
+ "fields": {
+  "app_label": "ledger_app",
+  "model": "ledger"
+ }
+ },
+ {
+ "model": "sessions.session",
+ "pk": "lpx2ud0fj276rkb1x436gxfqujcjc5wl",
+ "fields": {
+  "session_data": ".eJxVjDsOwjAQBe_iGln-xB8o6XMGa3ftxQHkSHFSIe4OkVJA-2bmvUSCba1p62VJUxYXocXpd0OgR2k7yHdot1nS3NZlQrkr8qBdjnMuz-vh_h1U6PVbG7SRLPozA5sQCqCyIVhC0uS9I69Ym2LAxoEhZhyUcxo0c3QmgELx_gDwozgd:1k7xlw:6rDgzCx1nNkqeHy8OHODFQKXRjgG6Zy0C4a-XqFPKQM",
+  "expire_date": "2020-09-01T09:19:12.106Z"
+ }
+ },
+ {
+ "model": "anon_app.hosting",
+ "pk": 1,
+ "fields": {
+  "paidservice_ptr": 1
+ }
+ },
+ {
+ "model": "anon_app.hostingaccount",
+ "pk": 1,
+ "fields": {
+  "username": "user",
+  "password": "P@ssw0rd",
+  "hosting": 1
+ }
+ },
+ {
+ "model": "anon_app.server",
+ "pk": 1,
+ "fields": {
+  "geo": "",
+  "hosting": 1,
+  "ssh_ip": "192.168.1.101",
+  "ssh_port": 22
+ }
+ },
+ {
+ "model": "anon_app.srvaccount",
+ "pk": 1,
+ "fields": {
+  "username": "user",
+  "password": "P@ssw0rd",
+  "server": 1
+ }
+ },
+ {
+ "model": "anon_app.proxy",
+ "pk": 1,
+ "fields": {
+  "protocol": "HTTPS",
+  "username": "user",
+  "password": "P@ssw0rd",
+  "ip": "10.0.0.100",
+  "port": "3128",
+  "location": "Location",
+  "chain": null,
+  "state": "UNKNOWN"
+ }
+ },
+ {
+ "model": "ledger_app.paidservice",
+ "pk": 1,
+ "fields": {
+  "name": "besthosting",
+  "url": "https://besthosting.lan",
+  "note": ""
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add log entry",
+  "content_type": [
+  "admin",
+  "logentry"
+  ],
+  "codename": "add_logentry"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change log entry",
+  "content_type": [
+  "admin",
+  "logentry"
+  ],
+  "codename": "change_logentry"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete log entry",
+  "content_type": [
+  "admin",
+  "logentry"
+  ],
+  "codename": "delete_logentry"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view log entry",
+  "content_type": [
+  "admin",
+  "logentry"
+  ],
+  "codename": "view_logentry"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add permission",
+  "content_type": [
+  "auth",
+  "permission"
+  ],
+  "codename": "add_permission"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change permission",
+  "content_type": [
+  "auth",
+  "permission"
+  ],
+  "codename": "change_permission"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete permission",
+  "content_type": [
+  "auth",
+  "permission"
+  ],
+  "codename": "delete_permission"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view permission",
+  "content_type": [
+  "auth",
+  "permission"
+  ],
+  "codename": "view_permission"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add group",
+  "content_type": [
+  "auth",
+  "group"
+  ],
+  "codename": "add_group"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change group",
+  "content_type": [
+  "auth",
+  "group"
+  ],
+  "codename": "change_group"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete group",
+  "content_type": [
+  "auth",
+  "group"
+  ],
+  "codename": "delete_group"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view group",
+  "content_type": [
+  "auth",
+  "group"
+  ],
+  "codename": "view_group"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add user",
+  "content_type": [
+  "auth",
+  "user"
+  ],
+  "codename": "add_user"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change user",
+  "content_type": [
+  "auth",
+  "user"
+  ],
+  "codename": "change_user"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete user",
+  "content_type": [
+  "auth",
+  "user"
+  ],
+  "codename": "delete_user"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view user",
+  "content_type": [
+  "auth",
+  "user"
+  ],
+  "codename": "view_user"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add content type",
+  "content_type": [
+  "contenttypes",
+  "contenttype"
+  ],
+  "codename": "add_contenttype"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change content type",
+  "content_type": [
+  "contenttypes",
+  "contenttype"
+  ],
+  "codename": "change_contenttype"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete content type",
+  "content_type": [
+  "contenttypes",
+  "contenttype"
+  ],
+  "codename": "delete_contenttype"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view content type",
+  "content_type": [
+  "contenttypes",
+  "contenttype"
+  ],
+  "codename": "view_contenttype"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add session",
+  "content_type": [
+  "sessions",
+  "session"
+  ],
+  "codename": "add_session"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change session",
+  "content_type": [
+  "sessions",
+  "session"
+  ],
+  "codename": "change_session"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete session",
+  "content_type": [
+  "sessions",
+  "session"
+  ],
+  "codename": "delete_session"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view session",
+  "content_type": [
+  "sessions",
+  "session"
+  ],
+  "codename": "view_session"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add Token",
+  "content_type": [
+  "authtoken",
+  "token"
+  ],
+  "codename": "add_token"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change Token",
+  "content_type": [
+  "authtoken",
+  "token"
+  ],
+  "codename": "change_token"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete Token",
+  "content_type": [
+  "authtoken",
+  "token"
+  ],
+  "codename": "delete_token"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view Token",
+  "content_type": [
+  "authtoken",
+  "token"
+  ],
+  "codename": "view_token"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add token",
+  "content_type": [
+  "authtoken",
+  "tokenproxy"
+  ],
+  "codename": "add_tokenproxy"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change token",
+  "content_type": [
+  "authtoken",
+  "tokenproxy"
+  ],
+  "codename": "change_tokenproxy"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete token",
+  "content_type": [
+  "authtoken",
+  "tokenproxy"
+  ],
+  "codename": "delete_tokenproxy"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view token",
+  "content_type": [
+  "authtoken",
+  "tokenproxy"
+  ],
+  "codename": "view_tokenproxy"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add chain",
+  "content_type": [
+  "anon_app",
+  "chain"
+  ],
+  "codename": "add_chain"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change chain",
+  "content_type": [
+  "anon_app",
+  "chain"
+  ],
+  "codename": "change_chain"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete chain",
+  "content_type": [
+  "anon_app",
+  "chain"
+  ],
+  "codename": "delete_chain"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view chain",
+  "content_type": [
+  "anon_app",
+  "chain"
+  ],
+  "codename": "view_chain"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add hosting",
+  "content_type": [
+  "anon_app",
+  "hosting"
+  ],
+  "codename": "add_hosting"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change hosting",
+  "content_type": [
+  "anon_app",
+  "hosting"
+  ],
+  "codename": "change_hosting"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete hosting",
+  "content_type": [
+  "anon_app",
+  "hosting"
+  ],
+  "codename": "delete_hosting"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view hosting",
+  "content_type": [
+  "anon_app",
+  "hosting"
+  ],
+  "codename": "view_hosting"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add server",
+  "content_type": [
+  "anon_app",
+  "server"
+  ],
+  "codename": "add_server"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change server",
+  "content_type": [
+  "anon_app",
+  "server"
+  ],
+  "codename": "change_server"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete server",
+  "content_type": [
+  "anon_app",
+  "server"
+  ],
+  "codename": "delete_server"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view server",
+  "content_type": [
+  "anon_app",
+  "server"
+  ],
+  "codename": "view_server"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add srv account",
+  "content_type": [
+  "anon_app",
+  "srvaccount"
+  ],
+  "codename": "add_srvaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change srv account",
+  "content_type": [
+  "anon_app",
+  "srvaccount"
+  ],
+  "codename": "change_srvaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete srv account",
+  "content_type": [
+  "anon_app",
+  "srvaccount"
+  ],
+  "codename": "delete_srvaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view srv account",
+  "content_type": [
+  "anon_app",
+  "srvaccount"
+  ],
+  "codename": "view_srvaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add node",
+  "content_type": [
+  "anon_app",
+  "node"
+  ],
+  "codename": "add_node"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change node",
+  "content_type": [
+  "anon_app",
+  "node"
+  ],
+  "codename": "change_node"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete node",
+  "content_type": [
+  "anon_app",
+  "node"
+  ],
+  "codename": "delete_node"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view node",
+  "content_type": [
+  "anon_app",
+  "node"
+  ],
+  "codename": "view_node"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add hosting account",
+  "content_type": [
+  "anon_app",
+  "hostingaccount"
+  ],
+  "codename": "add_hostingaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change hosting account",
+  "content_type": [
+  "anon_app",
+  "hostingaccount"
+  ],
+  "codename": "change_hostingaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete hosting account",
+  "content_type": [
+  "anon_app",
+  "hostingaccount"
+  ],
+  "codename": "delete_hostingaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view hosting account",
+  "content_type": [
+  "anon_app",
+  "hostingaccount"
+  ],
+  "codename": "view_hostingaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add edge",
+  "content_type": [
+  "anon_app",
+  "edge"
+  ],
+  "codename": "add_edge"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change edge",
+  "content_type": [
+  "anon_app",
+  "edge"
+  ],
+  "codename": "change_edge"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete edge",
+  "content_type": [
+  "anon_app",
+  "edge"
+  ],
+  "codename": "delete_edge"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view edge",
+  "content_type": [
+  "anon_app",
+  "edge"
+  ],
+  "codename": "view_edge"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add app image",
+  "content_type": [
+  "anon_app",
+  "appimage"
+  ],
+  "codename": "add_appimage"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change app image",
+  "content_type": [
+  "anon_app",
+  "appimage"
+  ],
+  "codename": "change_appimage"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete app image",
+  "content_type": [
+  "anon_app",
+  "appimage"
+  ],
+  "codename": "delete_appimage"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view app image",
+  "content_type": [
+  "anon_app",
+  "appimage"
+  ],
+  "codename": "view_appimage"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add proxy",
+  "content_type": [
+  "anon_app",
+  "proxy"
+  ],
+  "codename": "add_proxy"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change proxy",
+  "content_type": [
+  "anon_app",
+  "proxy"
+  ],
+  "codename": "change_proxy"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete proxy",
+  "content_type": [
+  "anon_app",
+  "proxy"
+  ],
+  "codename": "delete_proxy"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view proxy",
+  "content_type": [
+  "anon_app",
+  "proxy"
+  ],
+  "codename": "view_proxy"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add OpenVPN client",
+  "content_type": [
+  "anon_app",
+  "openvpnclient"
+  ],
+  "codename": "add_openvpnclient"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change OpenVPN client",
+  "content_type": [
+  "anon_app",
+  "openvpnclient"
+  ],
+  "codename": "change_openvpnclient"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete OpenVPN client",
+  "content_type": [
+  "anon_app",
+  "openvpnclient"
+  ],
+  "codename": "delete_openvpnclient"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view OpenVPN client",
+  "content_type": [
+  "anon_app",
+  "openvpnclient"
+  ],
+  "codename": "view_openvpnclient"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add Lemmings task",
+  "content_type": [
+  "lemmings_app",
+  "lemmingstask"
+  ],
+  "codename": "add_lemmingstask"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change Lemmings task",
+  "content_type": [
+  "lemmings_app",
+  "lemmingstask"
+  ],
+  "codename": "change_lemmingstask"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete Lemmings task",
+  "content_type": [
+  "lemmings_app",
+  "lemmingstask"
+  ],
+  "codename": "delete_lemmingstask"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view Lemmings task",
+  "content_type": [
+  "lemmings_app",
+  "lemmingstask"
+  ],
+  "codename": "view_lemmingstask"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add BotAccount",
+  "content_type": [
+  "lemmings_app",
+  "botaccount"
+  ],
+  "codename": "add_botaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change BotAccount",
+  "content_type": [
+  "lemmings_app",
+  "botaccount"
+  ],
+  "codename": "change_botaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete BotAccount",
+  "content_type": [
+  "lemmings_app",
+  "botaccount"
+  ],
+  "codename": "delete_botaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view BotAccount",
+  "content_type": [
+  "lemmings_app",
+  "botaccount"
+  ],
+  "codename": "view_botaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add Account Pool Setting",
+  "content_type": [
+  "lemmings_app",
+  "accountpoolsetting"
+  ],
+  "codename": "add_accountpoolsetting"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change Account Pool Setting",
+  "content_type": [
+  "lemmings_app",
+  "accountpoolsetting"
+  ],
+  "codename": "change_accountpoolsetting"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete Account Pool Setting",
+  "content_type": [
+  "lemmings_app",
+  "accountpoolsetting"
+  ],
+  "codename": "delete_accountpoolsetting"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view Account Pool Setting",
+  "content_type": [
+  "lemmings_app",
+  "accountpoolsetting"
+  ],
+  "codename": "view_accountpoolsetting"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add Currency",
+  "content_type": [
+  "ledger_app",
+  "currency"
+  ],
+  "codename": "add_currency"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change Currency",
+  "content_type": [
+  "ledger_app",
+  "currency"
+  ],
+  "codename": "change_currency"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete Currency",
+  "content_type": [
+  "ledger_app",
+  "currency"
+  ],
+  "codename": "delete_currency"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view Currency",
+  "content_type": [
+  "ledger_app",
+  "currency"
+  ],
+  "codename": "view_currency"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add Paid Service",
+  "content_type": [
+  "ledger_app",
+  "paidservice"
+  ],
+  "codename": "add_paidservice"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change Paid Service",
+  "content_type": [
+  "ledger_app",
+  "paidservice"
+  ],
+  "codename": "change_paidservice"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete Paid Service",
+  "content_type": [
+  "ledger_app",
+  "paidservice"
+  ],
+  "codename": "delete_paidservice"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view Paid Service",
+  "content_type": [
+  "ledger_app",
+  "paidservice"
+  ],
+  "codename": "view_paidservice"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add Service Account",
+  "content_type": [
+  "ledger_app",
+  "serviceaccount"
+  ],
+  "codename": "add_serviceaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change Service Account",
+  "content_type": [
+  "ledger_app",
+  "serviceaccount"
+  ],
+  "codename": "change_serviceaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete Service Account",
+  "content_type": [
+  "ledger_app",
+  "serviceaccount"
+  ],
+  "codename": "delete_serviceaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view Service Account",
+  "content_type": [
+  "ledger_app",
+  "serviceaccount"
+  ],
+  "codename": "view_serviceaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add Ledger",
+  "content_type": [
+  "ledger_app",
+  "ledger"
+  ],
+  "codename": "add_ledger"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change Ledger",
+  "content_type": [
+  "ledger_app",
+  "ledger"
+  ],
+  "codename": "change_ledger"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete Ledger",
+  "content_type": [
+  "ledger_app",
+  "ledger"
+  ],
+  "codename": "delete_ledger"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view Ledger",
+  "content_type": [
+  "ledger_app",
+  "ledger"
+  ],
+  "codename": "view_ledger"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add lemmings task",
+  "content_type": [
+  "anon_app",
+  "openvpnclient"
+  ],
+  "codename": "add_lemmingstask"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change lemmings task",
+  "content_type": [
+  "anon_app",
+  "openvpnclient"
+  ],
+  "codename": "change_lemmingstask"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete lemmings task",
+  "content_type": [
+  "anon_app",
+  "openvpnclient"
+  ],
+  "codename": "delete_lemmingstask"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view lemmings task",
+  "content_type": [
+  "anon_app",
+  "openvpnclient"
+  ],
+  "codename": "view_lemmingstask"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can add bot account",
+  "content_type": [
+  "lemmings_app",
+  "lemmingstask"
+  ],
+  "codename": "add_botaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can change bot account",
+  "content_type": [
+  "lemmings_app",
+  "lemmingstask"
+  ],
+  "codename": "change_botaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can delete bot account",
+  "content_type": [
+  "lemmings_app",
+  "lemmingstask"
+  ],
+  "codename": "delete_botaccount"
+ }
+ },
+ {
+ "model": "auth.permission",
+ "fields": {
+  "name": "Can view bot account",
+  "content_type": [
+  "lemmings_app",
+  "lemmingstask"
+  ],
+  "codename": "view_botaccount"
+ }
+ },
+ {
+ "model": "auth.user",
+ "fields": {
+  "password": "pbkdf2_sha256$216000$14ZHW1FqjO8m$bgV6HLy6w1lAaprNDlU3YZAcjdixpH8x4QXivnoKuXE=",
+  "last_login": "2020-08-18T09:19:12.103Z",
+  "is_superuser": true,
+  "username": "alex",
+  "first_name": "",
+  "last_name": "",
+  "email": "",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2020-08-18T09:18:19.232Z",
+  "groups": [],
+  "user_permissions": []
+ }
+ }
+]

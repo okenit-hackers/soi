@@ -1,0 +1,13 @@
+- name: ping pong check
+ hosts: all
+ serial: 1
+ become: yes
+ tasks:
+ - name: calc pong
+  shell: echo "pong"
+  register: pong
+ - name: print result
+  debug:
+  msg: "{{ pong.stdout }}"
+
+# ansible-playbook -i "192.168.56.11," --private-key=~/.ssh/id_rsa test.yml

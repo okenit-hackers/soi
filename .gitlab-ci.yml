@@ -1,0 +1,41 @@
+stages:
+ - testing
+ - upload_to_pypi
+
+
+tests:
+ stage: testing
+ image: docker:19.03.12
+ tags: [test]
+ variables:
+ DOCKER_TLS_CERTDIR: ''
+ services:
+ - name: docker:19.03.12-dind
+  entrypoint: ['dockerd-entrypoint.sh']
+  command: ['--insecure-registry=maven.lan:8082']
+ before_script:
+ - apk update && apk add openssh-client docker-compose sshpass
+ - echo $NEXUS_PASSWORD | docker login -u $NEXUS_USER --password-stdin maven.lan:8082
+ - docker build --tag soi_web-app:latest --build-arg NEXUS_USER --build-arg NEXUS_PASSWORD .
+ script:
+ - docker-compose -f docker-compose.testing.yml run web-app test
+
+
+.anchor_pypi: &upload_to_pypi
+ stage: upload_to_pypi
+ image: maven.lan:8082/poetry:1.2.0-alpine
+ before_script:
+ - poetry config repositories.nexus http://maven.lan:8081/repository/pypi-filigree-hosted/
+ - poetry config http-basic.nexus $NEXUS_USER $NEXUS_PASSWORD
+ - poetry version $(poetry version -s).$CI_PIPELINE_ID
+ script:
+ - poetry publish --build --repository nexus
+
+pypi auto:
+ <<: *upload_to_pypi
+ only:
+ - master
+
+pypi manual:
+ <<: *upload_to_pypi
+ when: manual

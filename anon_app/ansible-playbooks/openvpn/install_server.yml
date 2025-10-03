@@ -1,0 +1,26 @@
+---
+- name: Install OpenVPN
+ hosts: all
+ become: yes
+ vars_files:
+ vars.yml
+
+ pre_tasks:
+ - name: Ensure ccd dir exists
+  file:
+  path: "{{ ovpn_ccd_dir }}"
+  state: "directory"
+  recurse: yes
+  tags:
+  - client_keys
+ - name: Create ccd file
+  copy:
+  content: "{{ item }}"
+  dest: "{{ ovpn_ccd_dir }}/{{ ovpn_username }}"
+  loop: "{{ ovpn_ccd_content }}"
+  when: ovpn_sub_network != openvpn_server_network
+  tags:
+  - client_keys
+
+ roles:
+ - role: kyl191.openvpn

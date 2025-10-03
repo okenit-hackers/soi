@@ -1,0 +1,14 @@
+---
+- name: zip and unzip installation
+ hosts: all
+ serial: 1
+ become: yes
+ tasks:
+ - name: Install common packages
+  apt:
+  update_cache: yes
+  name: "{{ packages }}"
+  vars:
+  packages:
+   - zip
+   - unzip

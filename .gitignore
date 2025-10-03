@@ -1,0 +1,12 @@
+venv
+.venv
+.idea
+*__pycache__
+trash
+chromedriver
+build/
+dist/
+run-external-celery.py
+run-internal-celery.py
+*.egg-info/
+.python-version

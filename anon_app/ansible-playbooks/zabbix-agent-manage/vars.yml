@@ -1,0 +1,13 @@
+# change also config/zabbix/agents/vars.yml in soi and sos
+
+user: zabbix
+group: zabbix
+log_file: /var/log/zabbix.log
+home: "/var/lib/{{user}}"
+conf_dir: /etc/zabbix
+dirs:
+ - "{{conf_dir}}/zabbix_agentd.conf.d/"
+ - "{{home}}/modules/"
+config_path: "{{conf_dir}}/zabbix_agentd.conf"
+server_port: "{{ lookup('env', 'ZBX_SERVER_PORT') }}"
+hostname: "{{ lookup('env', 'ZBX_HOSTNAME') }}"

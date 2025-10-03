@@ -1,0 +1,14 @@
+---
+- name: Connect to OpenVPN
+ hosts: all
+ vars_files:
+ vars.yml
+
+ tasks:
+ - name: Deliver config
+  copy:
+  src: "{{ ovpn_config_path }}"
+  dest: "~/{{ ovpn_config_path.split('/')[-1] }}"
+  mode: '0600'
+ - name: Connect to server
+  shell: "openvpn3 session-start --config ~/{{ ovpn_config_path.split('/')[-1] }}"

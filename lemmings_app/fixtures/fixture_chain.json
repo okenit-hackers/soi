@@ -1,0 +1,30 @@
+[
+ {
+ "model": "anon_app.chain",
+ "pk": 12,
+ "fields": {
+  "title": "first",
+  "task_queue_name": "internal_celery",
+  "app_image": null,
+  "status": "READY",
+  "for_internet_access": false,
+  "need_pull_accounts": false,
+  "openvpn_config": "",
+  "openssh_container_id_rsa": "/opt/sos_app/media/AIef1fpomyhQ1Oru2R5LNvuhiL1xSUoE",
+  "openssh_container_id_rsa_pub": "/opt/sos_app/media/AIef1fpomyhQ1Oru2R5LNvuhiL1xSUoE.pub",
+  "openssh_container_external_port": 7777,
+  "openssh_container_internal_port": 7777,
+  "ping": null,
+  "upload_speed": null,
+  "download_speed": null,
+  "ports_info": {},
+  "last_update_info_dt": null,
+  "last_checking_celery_task_id": null,
+  "proxy_limit": 10,
+  "concurrency": 0,
+  "check_proxy_limit": false,
+  "has_proxies_chain": false,
+  "proxies_in_chain": 0
+ }
+ }
+]

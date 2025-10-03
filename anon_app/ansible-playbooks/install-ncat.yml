@@ -1,0 +1,8 @@
+---
+- name: ncat installation
+ hosts: all
+ become: yes
+ tasks:
+ - apt:
+  update_cache: yes
+  name: "ncat"

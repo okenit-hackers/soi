@@ -1,0 +1,9 @@
+venv
+.vscode
+.idea
+*local.py
+*__pycache__
+*.log
+.venv
+trash
+*.pyc

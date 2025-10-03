@@ -1,0 +1,3 @@
+import os
+
+COUNT_OF_ACTIONS = int(os.environ.get('STERIOTYPES_GENERATOR_COUNT_OF_ACTIONS', '15'))

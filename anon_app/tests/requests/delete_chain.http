@@ -1,0 +1,15 @@
+DELETE http://127.0.0.1:8000/chain/3/?format=json
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: application/json, text/plain, */*
+Authorization:Token 186972bab0b0ed125b0d90fdbed219518bd4538d
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36
+Origin: http://localhost:8080
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:8080/
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+
+###

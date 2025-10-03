@@ -1,0 +1,112 @@
+[
+ {
+ "model": "anon_app.proxy",
+ "pk": 2248,
+ "fields": {
+  "protocol": "http",
+  "username": "nn9Sr7PP",
+  "password": "JSFEWTFX",
+  "ip": "212.192.57.234",
+  "port": "63496",
+  "location": "Испания",
+  "chain": null,
+  "state": "ALIVE",
+  "secure_flag": "PAID",
+  "applying": "UNUSED",
+  "number_of_applying": "REUSABLE",
+  "source": "",
+  "services": {},
+  "comment": "",
+  "last_check_dt": "2023-09-14T07:22:12.338Z",
+  "last_successful_check_dt": null
+ }
+ },
+ {
+ "model": "anon_app.proxy",
+ "pk": 1247,
+ "fields": {
+  "protocol": "http",
+  "username": "nn9Sr7PP",
+  "password": "JSFEWTFX",
+  "ip": "194.190.210.155",
+  "port": "62084",
+  "location": "Германия",
+  "chain": null,
+  "state": "ALIVE",
+  "secure_flag": "PAID",
+  "applying": "UNUSED",
+  "number_of_applying": "REUSABLE",
+  "source": "",
+  "services": {},
+  "comment": "",
+  "last_check_dt": "2023-09-14T07:22:12.335Z",
+  "last_successful_check_dt": null
+ }
+ },
+ {
+ "model": "anon_app.proxy",
+ "pk": 2706,
+ "fields": {
+  "protocol": "http",
+  "username": "nn9Sr7PP",
+  "password": "JSFEWTFX",
+  "ip": "45.152.215.250",
+  "port": "64000",
+  "location": "Россия",
+  "chain": 12,
+  "state": "ALIVE",
+  "secure_flag": "PAID",
+  "applying": "USED",
+  "number_of_applying": "REUSABLE",
+  "source": "",
+  "services": {},
+  "comment": "",
+  "last_check_dt": "2023-09-22T12:44:50.485Z",
+  "last_successful_check_dt": "2023-09-22T12:44:50.485Z"
+ }
+ },
+ {
+ "model": "anon_app.proxy",
+ "pk": 2702,
+ "fields": {
+  "protocol": "http",
+  "username": "nn9Sr7PP",
+  "password": "JSFEWTFX",
+  "ip": "45.140.62.55",
+  "port": "63256",
+  "location": "Бельгия",
+  "chain": 12,
+  "state": "ALIVE",
+  "secure_flag": "PAID",
+  "applying": "UNUSED",
+  "number_of_applying": "REUSABLE",
+  "source": "",
+  "services": {},
+  "comment": "",
+  "last_check_dt": "2023-09-22T12:44:50.442Z",
+  "last_successful_check_dt": "2023-09-22T12:44:50.442Z"
+ }
+ },
+ {
+ "model": "anon_app.proxy",
+ "pk": 2698,
+ "fields": {
+  "protocol": "http",
+  "username": "nn9Sr7PP",
+  "password": "JSFEWTFX",
+  "ip": "46.232.26.100",
+  "port": "63804",
+  "location": "Соединенные Штаты",
+  "chain": 12,
+  "state": "ALIVE",
+  "secure_flag": "PAID",
+  "applying": "USED",
+  "number_of_applying": "REUSABLE",
+  "source": "",
+  "services": {},
+  "comment": "",
+  "last_check_dt": "2023-09-22T12:44:50.687Z",
+  "last_successful_check_dt": "2023-09-22T12:44:50.687Z"
+ }
+ }
+]

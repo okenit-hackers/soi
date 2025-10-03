@@ -1,0 +1,135 @@
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# crazyzubr <hjcnbckfd@gmail.com>, 2020
+# Ivan Khomutov <iskhomutov@gmail.com>, 2017
+# Jannis Leidel <jannis@leidel.info>, 2011
+# Алексей Борискин <sun.void@gmail.com>, 2012-2015
+# Андрей Щуров <shurov9009@gmail.com>, 2016
+# Дмитрий Шатера <mr.bobsans@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-15 16:38+0300\n"
+"PO-Revision-Date: 2020-05-13 18:48+0000\n"
+"Last-Translator: crazyzubr <hjcnbckfd@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/django/django/language/"
+"ru/)\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: admin.py:11
+#, fuzzy
+#| msgid "Notifications"
+msgid "Notification status"
+msgstr "Статус уведомления"
+
+#: admin.py:16
+#, fuzzy
+#| msgid "Notifications"
+msgid "Unread notifications"
+msgstr "Непрочитанные уведомления"
+
+#: admin.py:17
+#, fuzzy
+#| msgid "Notifications"
+msgid "Notifications read"
+msgstr "Прочитанные уведомления"
+
+#: admin.py:57
+msgid "error info"
+msgstr "Информация об ошибке"
+
+#: admin.py:78
+msgid "seen all"
+msgstr "Пометить выбранные, как прочитанные"
+
+#: admin.py:95
+msgid "Message"
+msgstr "Текст сообщения"
+
+#: apps.py:7
+msgid "notifications app"
+msgstr "Уведомления"
+
+#: models.py:26 models.py:153
+msgid "user"
+msgstr "Пользователь"
+
+#: models.py:41 models.py:52
+msgid "Danger"
+msgstr "Опасное"
+
+#: models.py:42 models.py:51
+msgid "Warning"
+msgstr "Предупреждение"
+
+#: models.py:43 models.py:54
+msgid "Success"
+msgstr "Успешное"
+
+#: models.py:44 models.py:53
+msgid "Info"
+msgstr "Информация"
+
+#: models.py:45
+msgid "Primary"
+msgstr ""
+
+#: models.py:46
+msgid "Gray"
+msgstr ""
+
+#: models.py:47
+msgid "Black"
+msgstr ""
+
+#: models.py:60
+msgid "log level"
+msgstr "Уровень уведомления"
+
+#: models.py:65
+msgid "content"
+msgstr "Текст сообщения"
+
+#: models.py:71
+msgid "seen date"
+msgstr "Дата просмотра сообщения"
+
+#: models.py:77
+msgid "send date"
+msgstr "Дата отправки уведомления"
+
+#: models.py:82
+msgid "created date"
+msgstr "Дата создания уведомления"
+
+#: models.py:85
+msgid "error"
+msgstr "Ошибка"
+
+#: models.py:88
+msgid "traceback"
+msgstr "Отчет об ошибке"
+
+#: models.py:143
+msgid "Notification"
+msgstr "Уведомление"
+
+#: models.py:144
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: models.py:155
+msgid "enabled"
+msgstr "включены"
+
+#: models.py:162 models.py:163
+msgid "Notifications enabling"
+msgstr "Всплывающие уведомления"

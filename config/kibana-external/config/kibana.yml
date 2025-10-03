@@ -1,0 +1,16 @@
+---
+## Default Kibana configuration from Kibana base image.
+## https://github.com/elastic/kibana/blob/master/src/dev/build/tasks/os_packages/docker_generator/templates/kibana_yml.template.js
+#
+server.name: kibana-ext
+server.host: "0"
+server.basePath: "/kibana-ext"
+server.rewriteBasePath: false
+
+elasticsearch.hosts: [ "http://elasticsearch-external:9200" ]
+xpack.monitoring.ui.container.elasticsearch.enabled: true
+
+## X-Pack security credentials
+#
+elasticsearch.username: elastic
+elasticsearch.password: /WXrllCs/SEZ1kwRq/R+aKSGA4s6Wra9M8iQckkeNzGZ

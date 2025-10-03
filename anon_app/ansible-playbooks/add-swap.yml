@@ -1,0 +1,19 @@
+- hosts: all
+ serial: 1
+ become: yes
+
+ vars:
+ swap_file_path: "{{ lookup('env', 'SWAP_FILE_PATH') | default('/swapfile', true)}}"
+ swap_file_size_mb: "{{ lookup('env', 'SWAP_FILE_SIZE_MB') | default(1024, true)}}"
+
+ pre_tasks:
+ - name: Check /proc/swaps
+  shell: "cat /proc/swaps | wc -l"
+  register: swap_count
+  run_once: true
+ - debug:
+  msg: "swap count: {{ swap_count.stdout | int - 1 }}"
+
+ roles:
+ - role: geerlingguy.swap
+  when: swap_count.stdout | int < 2

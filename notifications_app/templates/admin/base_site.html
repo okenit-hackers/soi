@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% load Notifications_tag static %}
+
+{% block extrastyle %}
+ {{ block.super }}
+ {% base_css_notifications %}
+{% endblock %}
+
+{% block welcome-msg %}
+ {% base_notifications %}
+ {% if user.notificationsenabling.enabled %}
+  {% popup_notifications %}
+ {% endif %}
+ {{ block.super }}
+{% endblock %}

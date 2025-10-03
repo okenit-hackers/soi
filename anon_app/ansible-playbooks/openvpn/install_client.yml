@@ -1,0 +1,30 @@
+---
+- name: Install OpenVPN Client
+ hosts: all
+ become: yes
+
+ tasks:
+ - name: Install dependencies
+  apt: pkg="apt-transport-https"
+ - name: Install dependencies
+  apt:
+  pkg:
+   - apt-transport-https
+   - ca-certificates
+
+ - name: Import OpenVPN apt key
+  apt_key:
+  url: https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub
+  state: present
+
+ - name: Add OpenVPN repo
+  get_url:
+  url: "https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-{{ ansible_distribution_release }}.list"
+  dest: /etc/apt/sources.list.d/openvpn3.list
+  register: openvpn_key
+ - name: Update apt cache
+  apt:
+  update_cache: yes
+ - name: Install OpenVPN
+  apt:
+  name: openvpn3

@@ -1,0 +1,34 @@
+version: '3.5'
+
+volumes:
+ media_volume:
+
+networks:
+ test_network:
+
+services:
+ db:
+ image: maven.lan:8082/postgres:12-alpine
+ volumes:
+  - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql # Создаёт БД и роль, если БД пуста
+ networks:
+  - test_network
+ env_file:
+  - env/postgres.env
+
+ web-app:
+ image: soi_web-app:latest
+ env_file:
+  - env/web-app.env
+ depends_on:
+  - db
+  - redis
+ volumes:
+  - media_volume:/opt/soi_app/media
+ networks:
+  - test_network
+
+ redis:
+ image: maven.lan:8082/redis:alpine
+ networks:
+  - test_network

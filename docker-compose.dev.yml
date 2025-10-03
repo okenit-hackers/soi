@@ -1,0 +1,299 @@
+version: '3.5'
+
+volumes:
+ pg_volume: # том для БД
+ external_pg_volume: # том для БД
+ static_volume: # том дял статических файлов (js, css)
+ media_volume: # том для медиафайлов (загружаемых файлов)
+ elasticsearch_internal_volume: # том для хранения внутренних данных elasticsearch
+ elasticsearch_external_volume: # том для хранения внешних данных elasticsearch
+ zabbix_stub_pg_volume: # том для хранения данных zabbix-stub
+
+networks:
+ nginx_network:
+ driver: bridge
+ db_network:
+ driver: bridge
+ external_db_network:
+ driver: bridge
+ elk_internal:
+ driver: bridge
+ elk_external:
+ driver: bridge
+ redis_network:
+ driver: bridge
+ zabbix_network:
+ driver: bridge
+
+services:
+ db:
+ image: postgres:12-alpine
+ volumes:
+  - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql # Создаёт БД и роль, если БД пуста
+  - pg_volume:/var/lib/postgresql/data # БД хранится на хосте в томе pg_volume
+ networks:
+  - db_network
+
+ env_file:
+  - env/postgres.env
+ 
+ zabbix-nginx:
+ image: zabbix/zabbix-web-nginx-pgsql:alpine-5.2-latest
+ links:
+  - zabbix-stub-db:zabbix-stub-db
+  - zabbix-stub-server:zabbix-stub-server
+ environment:
+  DB_SERVER_HOST: zabbix-stub-db
+  ZBX_SERVER_HOST: zabbix-stub-server
+ env_file:
+  - ./env/zabbix-postgres.env
+ depends_on:
+  - zabbix-stub-db
+  - zabbix-stub-server
+ healthcheck:
+  test: [ "CMD", "curl", "-f", "http://localhost:8080/" ]
+  interval: 10s
+  timeout: 5s
+  retries: 3
+  start_period: 30s
+ networks:
+  - zabbix_network
+  - nginx_network
+ 
+ zabbix-stub-db:
+ image: postgres:12-alpine
+ volumes:
+  - zabbix_stub_pg_volume:/var/lib/postgresql/data # БД хранится на хосте в томе pg_volume
+ env_file:
+  - ./env/zabbix-postgres.env
+ networks:
+  - zabbix_network
+
+ zabbix-stub-server:
+ image: zabbix/zabbix-server-pgsql:latest
+ networks:
+  - zabbix_network
+ env_file:
+  - ./env/zabbix-postgres.env
+ environment:
+  DB_SERVER_HOST: zabbix-stub-db
+ depends_on:
+  - zabbix-stub-db
+
+ zabbix-agent:
+ image: zabbix/zabbix-agent:alpine-5.2-latest
+ links:
+  - zabbix-stub-server:zabbix-stub-server
+ networks:
+  - zabbix_network
+ environment:
+  ZBX_HOSTNAME: zabbix-stub-agent
+  ZBX_SERVER_HOST: zabbix-stub-server
+
+ external-db:
+ image: postgres:12-alpine
+ volumes:
+  - ./sql/init_external.sql:/docker-entrypoint-initdb.d/init.sql # Создаёт БД и роль, если БД пуста
+  - external_pg_volume:/var/lib/postgresql/data # БД хранится на хосте в томе external_pg_volume
+ networks:
+  - external_db_network
+  - redis_network
+
+ env_file:
+  - env/external-postgres.env
+
+ redis:
+ image: redis:alpine
+
+ networks:
+  - redis_network
+
+ web-app:
+ image: gitlab.lan:5005/filigree/soi/soi_web-app:latest
+ # volumes:
+ # local directory with project -> container
+ # use for debug
+ #  - .:/code
+ depends_on:
+  - db
+  - external-db
+  - redis
+  - logstash-internal
+ env_file:
+  - env/web-app.env
+
+ networks:
+  - nginx_network
+  - external_db_network
+  - db_network
+  - elk_internal
+  - redis_network
+
+ volumes:
+  - static_volume:/opt/soi_app/static
+  - media_volume:/opt/soi_app/media
+  - ./anon_app:/usr/local/lib/python3.7/site-packages/anon_app
+  - ./lemmings_app:/usr/local/lib/python3.7/site-packages/lemmings_app
+  - ./soi_app:/usr/local/lib/python3.7/site-packages/soi_app
+  - ./soi_tasks:/usr/local/lib/python3.7/site-packages/soi_tasks
+  - ./stereotypes_generator:/usr/local/lib/python3.7/site-packages/stereotypes_generator
+  - ./end-node:/opt/end-node
+  - ./config/zabbix/agents/zabbix-agentd.conf.jinja2:/usr/local/lib/python3.7/site-packages/anon_app/ansible-playbooks/zabbix-agent-manage/zabbix-agentd.conf.jinja2:ro
+  - ./config/zabbix/agents/vars.yml:/usr/local/lib/python3.7/site-packages/anon_app/ansible-playbooks/zabbix-agent-manage/vars.yml:ro
+
+ # todo: уцдалить когда развернем нормально цепочки
+ celery:
+ image: gitlab.lan:5005/filigree/soi/soi_web-app:latest
+ command: celery external_celery
+ depends_on:
+  - redis
+ networks:
+  - redis_network
+  - elk_external
+ env_file:
+  - env/celery.env
+ volumes:
+  - ./anon_app:/usr/local/lib/python3.7/site-packages/anon_app
+  - ./lemmings_app:/usr/local/lib/python3.7/site-packages/lemmings_app
+  - ./soi_app:/usr/local/lib/python3.7/site-packages/soi_app
+  - ./soi_tasks:/usr/local/lib/python3.7/site-packages/soi_tasks
+  - ./stereotypes_generator:/usr/local/lib/python3.7/site-packages/stereotypes_generator
+
+ celery-internal:
+ image: gitlab.lan:5005/filigree/soi/soi_web-app:latest
+ command: celery_internal
+ depends_on:
+  - redis
+  - db
+  - external-db
+  - zabbix-nginx
+  - logstash-external
+  - celery-internal-beat
+ networks:
+  - redis_network
+  - elk_internal
+  - elk_external
+  - db_network
+  - external_db_network
+  - zabbix_network
+ env_file:
+  - env/celery-internal.env
+ volumes:
+  - media_volume:/opt/soi_app/media
+  - ./config/openssh/config/sshd_config:/etc/ssh/sshd_config:ro
+  - ./anon_app:/usr/local/lib/python3.7/site-packages/anon_app
+  - ./lemmings_app:/usr/local/lib/python3.7/site-packages/lemmings_app
+  - ./soi_app:/usr/local/lib/python3.7/site-packages/soi_app
+  - ./soi_tasks:/usr/local/lib/python3.7/site-packages/soi_tasks
+  - ./stereotypes_generator:/usr/local/lib/python3.7/site-packages/stereotypes_generator
+  - ./end-node:/opt/end-node
+  - ./config/zabbix/agents/zabbix-agentd.conf.jinja2:/usr/local/lib/python3.7/site-packages/anon_app/ansible-playbooks/zabbix-agent-manage/zabbix-agentd.conf.jinja2:ro
+  - ./config/zabbix/agents/vars.yml:/usr/local/lib/python3.7/site-packages/anon_app/ansible-playbooks/zabbix-agent-manage/vars.yml:ro
+
+ celery-internal-beat:
+ image: gitlab.lan:5005/filigree/soi/soi_web-app:latest
+ command: celery_internal_beat
+ depends_on:
+  - redis
+ networks:
+  - redis_network
+  - elk_internal
+ env_file:
+  - env/celery-internal.env
+ volumes:
+  - ./anon_app:/usr/local/lib/python3.7/site-packages/anon_app
+  - ./lemmings_app:/usr/local/lib/python3.7/site-packages/lemmings_app
+  - ./soi_app:/usr/local/lib/python3.7/site-packages/soi_app
+  - ./soi_tasks:/usr/local/lib/python3.7/site-packages/soi_tasks
+  - ./stereotypes_generator:/usr/local/lib/python3.7/site-packages/stereotypes_generator
+
+ web-server:
+ image: nginx:1.17.8-alpine
+ ports:
+  - 443:443 # только https
+ volumes:
+  - ./config/nginx/conf.d:/etc/nginx/conf.d:ro
+  - ./config/nginx/ssl:/etc/nginx/ssl:ro
+  - static_volume:/opt/soi_app/static:ro
+  - media_volume:/opt/soi_app/media
+ depends_on:
+  - web-app
+  - elasticsearch-internal
+  - kibana-internal
+  - elasticsearch-external
+  - kibana-external
+  - zabbix-nginx
+ networks:
+  - nginx_network
+  - elk_internal
+  - elk_external
+
+ logstash-internal:
+ image: logstash:7.6.2
+ volumes:
+  - ./config/logstash-internal/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+  - ./config/logstash-internal/pipeline:/usr/share/logstash/pipeline:ro
+ environment:
+  LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+
+ networks:
+  - elk_internal
+
+ depends_on:
+  - elasticsearch-internal
+
+ elasticsearch-internal:
+ image: elasticsearch:7.6.2
+ volumes:
+  - ./config/elasticsearch-internal/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+  - elasticsearch_internal_volume:/usr/share/elasticsearch/data
+ env_file:
+  - env/elasticsearch-internal.env
+ networks:
+  - elk_internal
+
+ logstash-external:
+ image: logstash:7.6.2
+ volumes:
+  - ./config/logstash-external/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+  - ./config/logstash-external/pipeline:/usr/share/logstash/pipeline:ro
+ environment:
+  LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+
+ networks:
+  - elk_external
+
+ depends_on:
+  - elasticsearch-external
+
+ elasticsearch-external:
+ image: elasticsearch:7.6.2
+ volumes:
+  - ./config/elasticsearch-external/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+  - elasticsearch_external_volume:/usr/share/elasticsearch/data
+ env_file:
+  - env/elasticsearch-external.env
+ networks:
+  - elk_external
+
+ kibana-internal:
+ image: kibana:7.6.2
+ volumes:
+  - ./config/kibana-internal/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+ env_file:
+  - env/kibana-internal.env
+ networks:
+  - elk_internal
+ depends_on:
+  - elasticsearch-internal
+
+ kibana-external:
+ image: kibana:7.6.2
+ volumes:
+  - ./config/kibana-external/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+ env_file:
+  - env/kibana-external.env
+ networks:
+  - elk_external
+ depends_on:
+  - elasticsearch-external

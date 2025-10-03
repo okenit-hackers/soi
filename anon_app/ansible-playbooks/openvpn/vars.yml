@@ -1,0 +1,34 @@
+clients: [ "{{ lookup('env', 'OVPN_CLIENT_SOI') }}" ]
+openvpn_base_dir: /etc/openvpn
+openvpn_ovpn_dir: "{{ openvpn_base_dir }}"
+openvpn_key_dir: /etc/openvpn/keys
+openvpn_server_network: "{{ lookup('env', 'OVPN_SRVNTWRK_SOI') }}"
+openvpn_server_netmask: "{{ lookup('env', 'OVPN_SRVNTMSK_SOI') | default('255.255.255.0', true)}}"
+ovpn_sub_network: "{{ lookup('env', 'OVPN_SUBNTWRK_SOI') or openvpn_server_network }}"
+ovpn_sub_netmask: "{{ lookup('env', 'OVPN_SUBNTMSK_SOI') or openvpn_server_netmask}}"
+openvpn_server_hostname: "{{ lookup('env', 'OVPN_SRVADDR_SOI') }}"
+openvpn_port: "{{ lookup('env', 'OVPN_PORT_SOI') | default(1194, true)}}"
+openvpn_fetch_config_dir: "{{playbook_dir}}/creds"
+openvpn_keepalive_ping: 10
+openvpn_keepalive_timeout: 120
+openvpn_use_modern_tls: false
+openvpn_client_to_client: true # ?
+openvpn_redirect_gateway: false
+openvpn_set_dns: false
+openvpn_enable_management: false # ?
+ovpn_ccd_dir: "{{ openvpn_ovpn_dir }}/ccd"
+openvpn_push:
+ - "route {{ ovpn_sub_network }} {{ ovpn_sub_netmask }}"
+openvpn_addl_server_options:
+ - "explicit-exit-notify 1"
+ - "client-config-dir ccd"
+ - "route {{ ovpn_sub_network }} {{ ovpn_sub_netmask }}"
+openvpn_resolv_retry: "infinite"
+openvpn_client_register_dns: false
+openvpn_compression: null
+ovpn_username: "OpenVPN-Client-{{ inventory_hostname[:24] }}-{{ clients[0] }}"
+ovpn_ccd_content:
+ - "iroute {{ovpn_sub_network}} {{ovpn_sub_netmask}}"
+
+# connection:
+ovpn_config_path: "{{ lookup('env', 'OVPN_CONFIG_PATH_SOI') }}"

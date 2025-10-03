@@ -1,0 +1,40 @@
+---
+- name: install proxychains4
+ hosts: all
+ become: yes
+ gather_facts: no
+ vars:
+ package_names:
+  - gcc
+  - make
+  - git
+  - proxychains4
+ tasks:
+ - name: 'Install packages'
+  package:
+  name: "{{ item }}"
+  state: present
+  loop: "{{ package_names }}"
+
+ - name: 'Check if microsocks exists'
+  stat: path=~/microsocks/
+  register: path
+
+ - name: 'Kill microsocks'
+  shell: pkill microsocks
+  ignore_errors: yes
+  when: path.stat.exists
+
+ - name: 'Download microsocks if needed'
+  git:
+  repo: 'https://github.com/rofl0r/microsocks.git'
+  dest: ~/microsocks
+  when: not path.stat.exists
+
+ - name: 'Install microsocks'
+  command: make install
+  args:
+  chdir: ~/microsocks
+
+ - name: 'Run proxychains4 microsocks'
+  shell: nohup proxychains4 microsocks </dev/null >/dev/null 2>&1 &

@@ -1,0 +1,327 @@
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# Ivan Ivaschenko <defuz.net@gmail.com>, 2013
+# Denis Darii <denis.darii@gmail.com>, 2011
+# Dimmus <dmitri.chudinov@gmail.com>, 2011
+# Eugene <eugene.mechanism@gmail.com>, 2016-2017
+# crazyzubr <hjcnbckfd@gmail.com>, 2020
+# Sergey <inoks@mail.ru>, 2016
+# Jannis Leidel <jannis@leidel.info>, 2011
+# SeryiMysh <vital@dorokhin.kz>, 2020
+# Алексей Борискин <sun.void@gmail.com>, 2012-2015
+# Дмитрий <nerosketch@gmail.com>, 2019
+# Дмитрий Шатера <mr.bobsans@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-14 19:53+0200\n"
+"PO-Revision-Date: 2020-07-21 09:32+0000\n"
+"Last-Translator: crazyzubr <hjcnbckfd@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/django/django/language/"
+"ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+msgid "Lemmings app"
+msgstr "Аккаунты социальных сетей"
+
+msgid "Lemmings task"
+msgstr "задачу создания и авторизации аккаунтов"
+
+msgid "Lemmings tasks"
+msgstr "Задачи создания и авторизации аккаунтов"
+
+msgid "action"
+msgstr "действие"
+
+msgid "kwargs"
+msgstr "входные данные"
+
+msgid "task id"
+msgstr "идентификатор задачи"
+
+msgid "result"
+msgstr "результат"
+
+msgid "BotAccount"
+msgstr "Аккаунт пользователя соц. сетеи"
+
+msgid "BotAccounts"
+msgstr "Аккаунты пользователей соц. сетей"
+
+msgid "service"
+msgstr "сервис"
+
+msgid "phone number"
+msgstr "номер телефона"
+
+msgid "extra data"
+msgstr "прочие данные"
+
+msgid "Import csv file"
+msgstr "импорт"
+
+msgid "import bots"
+msgstr "импорт"
+
+msgid "Account Pool Setting"
+msgstr "Настройки резерва аккаунтов"
+
+msgid "Account Pool Settings"
+msgstr "Настройки резерва аккаунтов"
+
+msgid "resource name"
+msgstr "Идентификатор ресурса"
+
+msgid "needed quantity"
+msgstr "Необходимое кол-во"
+
+msgid "sleep between runs"
+msgstr "ожидание между запусками"
+
+msgid "stereotype"
+msgstr "модель поведения"
+
+msgid "START"
+msgstr "Начало"
+
+msgid "BIO_GENERATED"
+msgstr "Биографические данные сгенерированы"
+
+msgid "REQUIRED_ACCOUNT_REGISTERED"
+msgstr "Дополнительный аккаунт сгенерирован"
+
+msgid "PHONE_RESERVED"
+msgstr "Телефонный номер зарезервирован"
+
+msgid "REGISTERED_IN_SERVICE"
+msgstr "Регистрация прошла успешно"
+
+msgid "ACCOUNT_SAVED"
+msgstr "Аккаунт сохранён"
+
+msgid "ACCOUNT_LOGGED_IN"
+msgstr "Авторизация прошла успешно"
+
+msgid "AUTH_SAVED"
+msgstr "Аутентификационные данные сохранены"
+
+msgid "READY"
+msgstr "Аккаунт готов"
+
+msgid "ERROR_BIO"
+msgstr "Ошибка при генерации биоданных"
+
+msgid "ERROR_SERVICE"
+msgstr "Ошибка при работе с сервисом при регистрации"
+
+msgid "ERROR_SUB_SERVICE"
+msgstr "Ошибка при работе с дополнительным сервисом"
+
+msgid "ERROR_PHONE"
+msgstr "Ошибка при работе с телефоном"
+
+msgid "ERROR_DB"
+msgstr "Ошибка при сохранении данных"
+
+msgid "service url"
+msgstr "Адрес сервиса"
+
+msgid "state"
+msgstr "состояние"
+
+msgid "lemmings_task"
+msgstr "Задача создания аккаунта"
+
+msgid "sex"
+msgstr "пол"
+
+msgid "birthday"
+msgstr "день рождения"
+
+msgid "first_name"
+msgstr "имя"
+
+msgid "last_name"
+msgstr "фамилия"
+
+msgid "example"
+msgstr "пример"
+
+msgid "wrong format, normal"
+msgstr "Неверный формат, нормальный"
+
+msgid "How much to create?"
+msgstr "Сколько создать?"
+
+msgid "How the account was obtained?"
+msgstr "Как получен аккаунт?"
+
+msgid "Imported"
+msgstr "Импортирован"
+
+msgid "Generated"
+msgstr "Сгенерирован"
+
+msgid "create progress"
+msgstr "Статус аккаунта"
+
+msgid "dependency account"
+msgstr "Зависимость"
+
+msgid "related accounts"
+msgstr "Связанные аккаунты"
+
+msgid "first name"
+msgstr "имя"
+
+msgid "last name"
+msgstr "фамилия"
+
+msgid "date of birth"
+msgstr "дата рождения"
+
+msgid "reg info"
+msgstr "регистрационная информация"
+
+msgid "login info"
+msgstr "авторизационная информация"
+
+msgid "required account hrefs"
+msgstr "Ссылки на связанные аккаунты"
+
+msgid "last error"
+msgstr "Ошибка"
+
+msgid "traceback"
+msgstr "Отчет об ошибке"
+
+msgid "last triggered at"
+msgstr "Время последнего запуска"
+
+msgid "error info"
+msgstr "Информация об ошибке"
+
+msgid "START_CHECK_LOGIN"
+msgstr "Запущена проверочная авторизация"
+
+msgid "ERROR_SERVICE_CHECK"
+msgstr "Ошибка при работе с сервисом"
+
+msgid "BLOCKED_ACC"
+msgstr "Аккаунт забанен"
+
+msgid "check_login"
+msgstr "Проверить доступность аккаунтов"
+
+msgid "successful auth date"
+msgstr "Дата успешной авторизации"
+
+msgid "ACCOUNT_BUSY"
+msgstr "Аккаунт занят задачей"
+
+msgid "ACCOUNT_RESERVED"
+msgstr "Аккаунт зарезервирован"
+
+msgid "Export to CSV"
+msgstr "Экспортировать в CSV"
+
+msgid "Export to human CSV"
+msgstr "Экспортировать в человекочитаемый CSV"
+
+msgid "Assign anon chain"
+msgstr "Назначить цепочку анонимизации"
+
+msgid "Behavior bots"
+msgstr "Поведение ботов"
+
+msgid "Behaviors bots"
+msgstr "Поведения ботов"
+
+msgid "Behavior bot"
+msgstr "Поведение бота"
+
+msgid "One of clocked, interval, crontab, or solar must be set."
+msgstr "Одно из расписаний должно быть выбрано - интервал, расписание, солнечное событие или хронометрическое"
+
+msgid "Only one of clocked, interval, crontab or solar must be set"
+msgstr "Только одно расписание может быть выбрано - интервал, расписание, солнечное или хронометрическое событие"
+
+msgid "clocked must be one off, one_off must set True"
+msgstr "Если указано хронометрическое, то одноразовая задача должна быть включена"
+
+msgid "Turn on behaviors bots"
+msgstr "Включить поведения ботов"
+
+msgid "Turn off behaviors bots"
+msgstr "Выключить поведения ботов"
+
+msgid "Reserve accounts"
+msgstr "Зарезервировать аккаунты"
+
+msgid "set ready"
+msgstr "Проставить готовый статус"
+
+msgid "Amount of attempts to create accounts"
+msgstr "Количество попыток создания учетных записей"
+
+msgid "changed"
+msgstr "Изменен"
+
+msgid "is need to set behavior"
+msgstr "Нужно ли ставить поведение?"
+
+msgid "Turn on behavior"
+msgstr "Включить поведения ботов"
+
+msgid "Turn off behavior"
+msgstr "Выключить поведения ботов"
+
+msgid "account created"
+msgstr "Аккаунт создан"
+
+msgid "Enable notifications"
+msgstr "Включить уведомления"
+
+msgid "Disable notifications"
+msgstr "Выключить уведомления"
+
+msgid "send notification"
+msgstr "Отправить уведомление"
+
+msgid "Send a notification when the limit of failed creation attempts is reached"
+msgstr "Отправить уведомление при достижении лимита неудачных попыток создания"
+
+msgid "Show accounts with linked accounts"
+msgstr "Показать аккаунты со связанными аккаунтами"
+
+msgid "Register new e-mail"
+msgstr "Зарегистрировать новую почту"
+
+msgid "API ID"
+msgstr "Идентификационный номер API"
+
+msgid "API hash"
+msgstr "Хэш API"
+
+msgid "API session"
+msgstr "Сессия API"
+
+msgid "Service account"
+msgstr "Сервисный аккаунт"
+
+msgid "push_to_tag"
+msgstr "Отправить ботов на сервер TAG"
+
+msgid "ACCOUNT_DELIVERED_TO_TAG"
+msgstr "Аккаунт доставлен в сервис TAG"
+
+msgid "ACCOUNT_DELIVERED_TO_TAG_ERROR"
+msgstr "Ошибка при добавлении аккаунта на сервер TAG"

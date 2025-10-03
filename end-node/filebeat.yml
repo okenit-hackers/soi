@@ -1,0 +1,12 @@
+filebeat.inputs:
+ - type: log
+ enabled: true
+ paths:
+  - /var/log/auth.log
+  - /var/log/zabbix.log
+
+
+output:
+ logstash:
+ hosts: ["openssh:5044"]
+ compression_level: 0

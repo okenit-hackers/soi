@@ -1,0 +1,87 @@
+# This file is distributed under the same license as the Django package.
+#
+# Translators:
+# Ivan Ivaschenko <defuz.net@gmail.com>, 2013
+# Denis Darii <denis.darii@gmail.com>, 2011
+# Dimmus <dmitri.chudinov@gmail.com>, 2011
+# Eugene <eugene.mechanism@gmail.com>, 2016-2017
+# crazyzubr <hjcnbckfd@gmail.com>, 2020
+# Sergey <inoks@mail.ru>, 2016
+# Jannis Leidel <jannis@leidel.info>, 2011
+# SeryiMysh <vital@dorokhin.kz>, 2020
+# Алексей Борискин <sun.void@gmail.com>, 2012-2015
+# Дмитрий <nerosketch@gmail.com>, 2019
+# Дмитрий Шатера <mr.bobsans@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-14 19:53+0200\n"
+"PO-Revision-Date: 2020-07-21 09:32+0000\n"
+"Last-Translator: crazyzubr <hjcnbckfd@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/django/django/language/"
+"ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+msgid "Paid Service"
+msgstr "Оплачиваемые сервисы"
+
+msgid "Ledger app"
+msgstr "Контроль оплачиваемых сервисов"
+
+msgid "Currency"
+msgstr "Валюта"
+
+msgid "Currencies"
+msgstr "Валюты"
+
+msgid "Ledger"
+msgstr "Состояние баланса"
+
+msgid "Service Account"
+msgstr "Аккаунты сервиса"
+
+msgid "Rent service"
+msgstr "Сервис аренды телефонов"
+
+msgid "Rent services"
+msgstr "Сервисы аренды телефонов"
+
+msgid "PhoneRentAccount"
+msgstr "Аккаунт сервиса аренды телефонов"
+
+msgid "PhoneRentAccounts"
+msgstr "Аккаунты сервиса аренды телефонов"
+
+msgid "Other service"
+msgstr "Другой сервис"
+
+msgid "Rent service type"
+msgstr "Тип смс сервиса"
+
+msgid "Balance"
+msgstr "Баланс"
+
+msgid "Account state"
+msgstr "Статус Аккаунта"
+
+msgid "Check balance"
+msgstr "Проверить баланс"
+
+msgid "not available"
+msgstr "Не доступен"
+
+msgid "available"
+msgstr "Доступен"
+
+msgid "bad key"
+msgstr "Ошибка - неверный ключ"
+
+msgid "error sql"
+msgstr "Ошибка - SQL-сервера"
